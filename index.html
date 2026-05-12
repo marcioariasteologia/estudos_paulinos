@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teologia Paulina — Índice Temático</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2e;
+    --navy-mid: #152238;
+    --navy-light: #1e3254;
+    --gold: #c9a84c;
+    --gold-light: #e2c97e;
+    --gold-dim: #8a6f2e;
+    --cream: #f4efe6;
+    --cream-dim: #d6cfc2;
+    --white: #ffffff;
+    --red-accent: #8b1a1a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--navy);
+    color: var(--cream);
+    font-family: 'EB Garamond', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  header {
+    text-align: center;
+    padding: 72px 0 56px;
+    position: relative;
+  }
+
+  .header-ornament {
+    color: var(--gold);
+    font-size: 22px;
+    letter-spacing: 12px;
+    margin-bottom: 24px;
+    opacity: 0.7;
+  }
+
+  header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 3px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--cream-dim);
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+  }
+
+  .header-rule {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  .header-rule span {
+    display: block;
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold-dim));
+  }
+
+  .header-rule span:last-child {
+    background: linear-gradient(to left, transparent, var(--gold-dim));
+  }
+
+  .header-rule i {
+    color: var(--gold);
+    font-size: 18px;
+    font-style: normal;
+  }
+
+  .epigraph {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--cream-dim);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+
+  .epigraph cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--gold-dim);
+    letter-spacing: 1px;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+  }
+
+  /* EIXOS TEMÁTICOS */
+  .eixos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 16px;
+  }
+
+  .eixo {
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .eixo:hover {
+    border-color: rgba(201,168,76,0.35);
+  }
+
+  .eixo-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 28px;
+    background: linear-gradient(to right, rgba(201,168,76,0.08), transparent);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+
+  .eixo-numero {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold-dim);
+    letter-spacing: 3px;
+    min-width: 28px;
+    opacity: 0.8;
+  }
+
+  .eixo-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(13px, 2vw, 16px);
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .eixo-subtitulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--cream-dim);
+    margin-left: auto;
+    opacity: 0.6;
+    white-space: nowrap;
+  }
+
+  .topicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0;
+  }
+
+  .topico {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 24px;
+    border-right: 1px solid rgba(201,168,76,0.07);
+    border-bottom: 1px solid rgba(201,168,76,0.07);
+    text-decoration: none;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+
+  .topico:hover {
+    background: rgba(201,168,76,0.06);
+  }
+
+  .topico-bullet {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold-dim);
+    margin-top: 8px;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .topico:hover .topico-bullet {
+    background: var(--gold);
+  }
+
+  .topico-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .topico-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15.5px;
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+
+  .topico:hover .topico-nome {
+    color: var(--gold-light);
+  }
+
+  .topico-grego {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--gold-dim);
+    opacity: 0.75;
+  }
+
+  .topico.concluido .topico-bullet {
+    background: var(--gold);
+  }
+
+  .topico.concluido .topico-nome {
+    color: var(--gold-light);
+  }
+
+  .topico.concluido::after {
+    content: '✓';
+    margin-left: auto;
+    color: var(--gold-dim);
+    font-size: 11px;
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 48px 0 0;
+    border-top: 1px solid rgba(201,168,76,0.12);
+    margin-top: 64px;
+  }
+
+  footer p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold-dim);
+    opacity: 0.6;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 16px 60px; }
+    header { padding: 48px 0 40px; }
+    .eixo-header { padding: 16px 18px; flex-wrap: wrap; }
+    .eixo-subtitulo { display: none; }
+    .topicos { grid-template-columns: 1fr; }
+    .topico { padding: 14px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="header-ornament">✦ ✦ ✦</div>
+    <h1>Teologia Paulina</h1>
+    <h2>Exegese, Teologia e Espiritualidade nas Cartas de Paulo</h2>
+    <div class="header-rule">
+      <span></span>
+      <i>✦</i>
+      <span></span>
+    </div>
+    <blockquote class="epigraph">
+      "Decidi não saber entre vós senão Jesus Cristo, e este crucificado."
+      <cite>— 1 Cor 2,2</cite>
+    </blockquote>
+  </header>
+
+  <div class="eixos">
+
+    <!-- 1. CRISTOLOGIA -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">I</span>
+        <span class="eixo-titulo">Cristologia</span>
+        <span class="eixo-subtitulo">Quem é Cristo em Paulo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico concluido" href="#" onclick="sendPrompt('Senhorio de Cristo (Kyrios) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Senhorio de Cristo</span>
+            <span class="topico-grego">Kyrios — κύριος</span>
+          </span>
+        </a>
+        <a class="topico concluido" href="#" onclick="sendPrompt('Pré-existência e encarnação do Filho nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Pré-existência e encarnação</span>
+            <span class="topico-grego">Morphē theou — μορφή θεοῦ</span>
+          </span>
+        </a>
+        <a class="topico concluido" href="#" onclick="sendPrompt('Morte e ressurreição como centro do kerygma paulino — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Morte e ressurreição</span>
+            <span class="topico-grego">Kerygma — κήρυγμα</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Cristo como imagem de Deus (eikōn) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Cristo como imagem de Deus</span>
+            <span class="topico-grego">Eikōn — εἰκών</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Hinos cristológicos (Filipenses 2, Colossenses 1) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Hinos cristológicos</span>
+            <span class="topico-grego">Fl 2,6-11 · Cl 1,15-20</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Cristo como segundo Adão nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Cristo como segundo Adão</span>
+            <span class="topico-grego">Rm 5 · 1 Cor 15</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Cristo Mediador e Sacerdote nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Mediador e Sacerdote</span>
+            <span class="topico-grego">Mesitēs — μεσίτης</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Cristo Cabeça do cosmos e recapitulação (anakephalaiōsis) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Cabeça do cosmos</span>
+            <span class="topico-grego">Anakephalaiōsis — ἀνακεφαλαίωσις</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. SOTERIOLOGIA -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">II</span>
+        <span class="eixo-titulo">Soteriologia</span>
+        <span class="eixo-subtitulo">A salvação em Cristo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Justificação pela fé nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Justificação pela fé</span>
+            <span class="topico-grego">Dikaiosynē — δικαιοσύνη</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Redenção e expiação pelo sangue de Cristo nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Redenção e expiação</span>
+            <span class="topico-grego">Apolytrōsis — ἀπολύτρωσις</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Reconciliação (katallagē) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Reconciliação</span>
+            <span class="topico-grego">Katallagē — καταλλαγή</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Libertação da Lei, do pecado e da morte nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Libertação da Lei, pecado e morte</span>
+            <span class="topico-grego">Rm 6–8</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Graça (charis) como dom gratuito nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Graça</span>
+            <span class="topico-grego">Charis — χάρις</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Eleição e predestinação nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Eleição e predestinação</span>
+            <span class="topico-grego">Ekloge — ἐκλογή</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Sangue da aliança e sacrifício nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Sangue da aliança</span>
+            <span class="topico-grego">1 Cor 11,25 · Rm 3,25</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Adoção filial (huiothesia) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Adoção filial</span>
+            <span class="topico-grego">Huiothesia — υἱοθεσία</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. PNEUMATOLOGIA -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">III</span>
+        <span class="eixo-titulo">Pneumatologia</span>
+        <span class="eixo-subtitulo">O Espírito Santo em Paulo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Espírito Santo como dom escatológico e arrabão nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Espírito como arrabão</span>
+            <span class="topico-grego">Arrabōn — ἀρραβών</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Espírito e carne (sarx vs. pneuma) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Espírito vs. carne</span>
+            <span class="topico-grego">Sarx vs. Pneuma — σάρξ / πνεῦμα</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Carismas e dons do Espírito nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Carismas e dons</span>
+            <span class="topico-grego">Charismata — χαρίσματα</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Frutos do Espírito (Gálatas 5) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Frutos do Espírito</span>
+            <span class="topico-grego">Karpos — καρπός · Gl 5,22-23</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Espírito que intercede (Romanos 8) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Espírito que intercede</span>
+            <span class="topico-grego">Rm 8,26-27</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Vida segundo o Espírito como norma ética nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Vida segundo o Espírito</span>
+            <span class="topico-grego">Rm 8,1-17</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Espírito e ressurreição do corpo nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Espírito e ressurreição do corpo</span>
+            <span class="topico-grego">Rm 8,11 · 1 Cor 15,44</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4. ECLESIOLOGIA -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">IV</span>
+        <span class="eixo-titulo">Eclesiologia</span>
+        <span class="eixo-subtitulo">A Igreja em Paulo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Igreja como Corpo de Cristo nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Igreja como Corpo de Cristo</span>
+            <span class="topico-grego">Sōma Christou — σῶμα Χριστοῦ</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Igreja como templo do Espírito nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Igreja como templo</span>
+            <span class="topico-grego">Naos — ναός · 1 Cor 3,16</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Unidade na diversidade dos membros nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Unidade na diversidade</span>
+            <span class="topico-grego">1 Cor 12,12-27</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Judeus e gentios na única Igreja (Efésios) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Judeus e gentios</span>
+            <span class="topico-grego">Ef 2,11-22</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Ministérios e estrutura da comunidade nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Ministérios e estrutura</span>
+            <span class="topico-grego">Ef 4,11-12 · 1 Cor 12,28</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Igreja esposa de Cristo (Efésios 5) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Igreja esposa de Cristo</span>
+            <span class="topico-grego">Ef 5,25-32</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Assembleia litúrgica e culto cristão nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Assembleia e culto</span>
+            <span class="topico-grego">Ekklēsia — ἐκκλησία</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Disciplina e correção fraterna na comunidade nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Disciplina e correção fraterna</span>
+            <span class="topico-grego">1 Cor 5 · Gl 6,1-2</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 5. ESCATOLOGIA -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">V</span>
+        <span class="eixo-titulo">Escatologia</span>
+        <span class="eixo-subtitulo">Os últimos tempos em Paulo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Parusia (segunda vinda de Cristo) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Parusia</span>
+            <span class="topico-grego">Parousia — παρουσία</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Ressurreição dos mortos (1 Coríntios 15) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Ressurreição dos mortos</span>
+            <span class="topico-grego">Anastasis — ἀνάστασις · 1 Cor 15</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Tensão já/ainda não (escatologia realizada) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Já / ainda não</span>
+            <span class="topico-grego">Escatologia realizada</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Julgamento final e obras nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Julgamento final</span>
+            <span class="topico-grego">Rm 2,6-16 · 2 Cor 5,10</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Esperança (elpis) como virtude teologal nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Esperança</span>
+            <span class="topico-grego">Elpis — ἐλπίς</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Nova criação escatológica nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Nova criação</span>
+            <span class="topico-grego">Kainē ktisis — καινὴ κτίσις</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Estado intermediário entre morte e ressurreição nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Estado intermediário</span>
+            <span class="topico-grego">Fl 1,21-24 · 2 Cor 5,1-10</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Dia do Senhor (hēmera Kyriou) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Dia do Senhor</span>
+            <span class="topico-grego">Hēmera Kyriou — ἡμέρα Κυρίου</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 6. ANTROPOLOGIA E ÉTICA -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">VI</span>
+        <span class="eixo-titulo">Antropologia e Ética</span>
+        <span class="eixo-subtitulo">O ser humano em Cristo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Homem novo e homem velho (Efésios 4, Colossenses 3) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Homem novo / homem velho</span>
+            <span class="topico-grego">Kainos anthrōpos — καινὸς ἄνθρωπος</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Carne (sarx) e espírito na antropologia paulina — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Carne e espírito</span>
+            <span class="topico-grego">Sarx — σάρξ · Gl 5,16-25</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Consciência (syneidesis) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Consciência</span>
+            <span class="topico-grego">Syneidesis — συνείδησις</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Corpo como templo do Espírito e ética corporal nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Corpo e ética corporal</span>
+            <span class="topico-grego">Sōma — σῶμα · 1 Cor 6,19</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Agapê (caridade) como vínculo da perfeição nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Agapê — caridade</span>
+            <span class="topico-grego">Agapē — ἀγάπη · 1 Cor 13</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Santidade (hagiasmos) como vocação universal nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Santidade</span>
+            <span class="topico-grego">Hagiasmos — ἁγιασμός</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Imitação de Cristo (mimesis) como norma ética nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Imitação de Cristo</span>
+            <span class="topico-grego">Mimēsis — μίμησις</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Liberdade cristã e seus limites nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Liberdade cristã</span>
+            <span class="topico-grego">Eleutheria — ἐλευθερία</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Coração (kardia) como centro da pessoa nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Coração como centro da pessoa</span>
+            <span class="topico-grego">Kardia — καρδία</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Alma, corpo e espírito — tricotomia ou dicotomia nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Alma, corpo e espírito</span>
+            <span class="topico-grego">Psychē · Sōma · Pneuma</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 7. LEI, GRAÇA E FÉ -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">VII</span>
+        <span class="eixo-titulo">Lei, Graça e Fé</span>
+        <span class="eixo-subtitulo">O coração da teologia paulina</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Fé (pistis) como resposta à justificação gratuita nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Fé</span>
+            <span class="topico-grego">Pistis — πίστις</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Lei mosaica e sua função nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Lei mosaica e seu papel</span>
+            <span class="topico-grego">Nomos — νόμος</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Obras da Lei versus fé em Gálatas e Romanos — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Obras da Lei vs. fé</span>
+            <span class="topico-grego">Erga nomou — ἔργα νόμου</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Abraão como modelo de fé (Romanos 4, Gálatas 3) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Abraão como modelo</span>
+            <span class="topico-grego">Rm 4 · Gl 3</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Pistis Christou — fé de Cristo ou em Cristo? Debate exegético nas cartas paulinas — passagens e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Pistis Christou</span>
+            <span class="topico-grego">Fé de Cristo — πίστις Χριστοῦ</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Lei como pedagogo (Gálatas 3,24) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Lei como pedagogo</span>
+            <span class="topico-grego">Paidagōgos — παιδαγωγός · Gl 3,24</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Cumprimento da Lei pelo amor nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Cumprimento da Lei pelo amor</span>
+            <span class="topico-grego">Rm 13,8-10 · Gl 5,14</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Maldição da Lei (Gálatas 3,13) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Maldição da Lei</span>
+            <span class="topico-grego">Katara — κατάρα · Gl 3,13</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 8. BATISMO E SACRAMENTOS -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">VIII</span>
+        <span class="eixo-titulo">Batismo e Sacramentos</span>
+        <span class="eixo-subtitulo">Vida sacramental em Paulo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Batismo como morte e ressurreição com Cristo (Romanos 6) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Batismo como morte com Cristo</span>
+            <span class="topico-grego">Rm 6,3-11</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Revestir Cristo no batismo (Gálatas 3,27) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Revestir Cristo no batismo</span>
+            <span class="topico-grego">Gl 3,27 · Rm 13,14</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Eucaristia (1 Coríntios 11) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Eucaristia</span>
+            <span class="topico-grego">1 Cor 11,23-26 · 10,16-17</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Circuncisão e batismo (Colossenses 2) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Circuncisão e batismo</span>
+            <span class="topico-grego">Cl 2,11-12</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Fórmula batismal trinitária e identidade cristã nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Fórmula batismal trinitária</span>
+            <span class="topico-grego">Gl 3,28 · 1 Cor 12,13</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Batismo no Espírito nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Batismo no Espírito</span>
+            <span class="topico-grego">1 Cor 12,13 · 2 Cor 1,21-22</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 9. ORAÇÃO E ESPIRITUALIDADE -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">IX</span>
+        <span class="eixo-titulo">Oração e Espiritualidade</span>
+        <span class="eixo-subtitulo">A vida interior em Paulo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Oração de Paulo — estrutura e teologia nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Oração de Paulo</span>
+            <span class="topico-grego">Ef 1,15-23 · Fl 1,9-11</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Ação de graças (eucharistia) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Ação de graças</span>
+            <span class="topico-grego">Eucharistia — εὐχαριστία</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Orar sem cessar (1 Tessalonicenses 5) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Orar sem cessar</span>
+            <span class="topico-grego">1 Ts 5,17 · Ef 6,18</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Louvor e hinos nas comunidades paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Louvor e hinos</span>
+            <span class="topico-grego">Ef 5,19 · Cl 3,16</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Conhecimento (gnosis) e contemplação nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Conhecimento e contemplação</span>
+            <span class="topico-grego">Gnōsis — γνῶσις · Fl 3,8-10</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Glossolalia e profecia nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Glossolalia e profecia</span>
+            <span class="topico-grego">1 Cor 14</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Abba Pai — oração filial nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Abba, Pai — oração filial</span>
+            <span class="topico-grego">Rm 8,15 · Gl 4,6</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 10. ISRAEL E GENTIOS -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">X</span>
+        <span class="eixo-titulo">Israel e Gentios</span>
+        <span class="eixo-subtitulo">O plano universal de Deus</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Mistério de Israel (Romanos 9–11) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Mistério de Israel</span>
+            <span class="topico-grego">Rm 9–11</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Universalidade da salvação nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Universalidade da salvação</span>
+            <span class="topico-grego">Rm 3,29-30 · Gl 3,28</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Semente de Abraão — promessa e herança nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Semente de Abraão</span>
+            <span class="topico-grego">Sperma — σπέρμα · Gl 3,16</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Oliveira e enxerto (Romanos 11) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Oliveira e enxerto</span>
+            <span class="topico-grego">Rm 11,17-24</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Plano universal de Deus (oikonomia) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Plano universal de Deus</span>
+            <span class="topico-grego">Oikonomia — οἰκονομία · Ef 1,10</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Endurecimento de Israel e misericórdia divina nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Endurecimento e misericórdia</span>
+            <span class="topico-grego">Rm 11,25-32</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Aliança nova e aliança antiga nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Aliança nova e aliança antiga</span>
+            <span class="topico-grego">2 Cor 3 · Gl 4,21-31</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 11. MISSÃO E APOSTOLADO -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">XI</span>
+        <span class="eixo-titulo">Missão e Apostolado</span>
+        <span class="eixo-subtitulo">Paulo servo do Evangelho</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Vocação apostólica de Paulo nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Vocação apostólica de Paulo</span>
+            <span class="topico-grego">Gl 1,15-16 · 1 Cor 15,8-10</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Kerygma — conteúdo e forma do anúncio nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Kerygma</span>
+            <span class="topico-grego">Kērygma — κήρυγμα</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Fraqueza apostólica e poder de Deus (2 Coríntios) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Fraqueza e poder apostólico</span>
+            <span class="topico-grego">2 Cor 4,7 · 12,9-10</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Inculturação e adaptação pastoral (1 Coríntios 9) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Inculturação pastoral</span>
+            <span class="topico-grego">1 Cor 9,19-23</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Sofrimento e participação na cruz nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Sofrimento e participação na cruz</span>
+            <span class="topico-grego">Fl 3,10 · Cl 1,24</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Redes missionárias e colaboradores de Paulo nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Redes missionárias</span>
+            <span class="topico-grego">Rm 16 · Fl 4,1-3</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Paulo e a tradição oral — transmissão do depósito da fé nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Transmissão do depósito da fé</span>
+            <span class="topico-grego">Paradosis — παράδοσις · 1 Cor 15,3</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 12. ÉTICA SOCIAL E POLÍTICA -->
+    <div class="eixo">
+      <div class="eixo-header">
+        <span class="eixo-numero">XII</span>
+        <span class="eixo-titulo">Ética Social e Política</span>
+        <span class="eixo-subtitulo">O cristão no mundo</span>
+      </div>
+      <div class="topicos">
+        <a class="topico" href="#" onclick="sendPrompt('Submissão às autoridades (Romanos 13) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Submissão às autoridades</span>
+            <span class="topico-grego">Rm 13,1-7</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Escravidão e liberdade (Filêmon, 1 Coríntios 7) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Escravidão e liberdade</span>
+            <span class="topico-grego">Fm · 1 Cor 7,21-24</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Igualdade em Cristo — nem judeu nem grego (Gálatas 3,28) nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Igualdade em Cristo</span>
+            <span class="topico-grego">Gl 3,28 · Cl 3,11</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Solidariedade e coleta para os pobres nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Solidariedade e coleta</span>
+            <span class="topico-grego">2 Cor 8–9 · Rm 15,26</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Família, matrimônio e virgindade nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Família, matrimônio e virgindade</span>
+            <span class="topico-grego">1 Cor 7 · Ef 5,21-33</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Trabalho e autossustento nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Trabalho e autossustento</span>
+            <span class="topico-grego">1 Ts 4,11 · 2 Ts 3,10-12</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Riqueza, pobreza e partilha nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Riqueza, pobreza e partilha</span>
+            <span class="topico-grego">2 Cor 8,9 · 1 Tm 6,17-19</span>
+          </span>
+        </a>
+        <a class="topico" href="#" onclick="sendPrompt('Consciência e liberdade na mesa dos ídolos nas cartas paulinas — passagens, exegese e teologia')">
+          <span class="topico-bullet"></span>
+          <span class="topico-texto">
+            <span class="topico-nome">Consciência na mesa dos ídolos</span>
+            <span class="topico-grego">1 Cor 8–10 · Rm 14–15</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /.eixos -->
+
+  <footer>
+    <p>Ad maiorem Dei gloriam — Tradução Bíblia de Jerusalém · Exegese acadêmica católica</p>
+  </footer>
+
+</div><!-- /.container -->
+
+<script>
+  // Mark topics as done when clicked
+  document.querySelectorAll('.topico:not(.concluido)').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.classList.add('concluido');
+      var fn = this.getAttribute('onclick');
+      if (fn) eval(fn);
+    });
+  });
+</script>
+</body>
+</html>
