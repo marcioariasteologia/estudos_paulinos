@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senhorio de Cristo — Teologia Paulina</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2e;
+    --navy-mid: #152238;
+    --navy-light: #1e3254;
+    --gold: #c9a84c;
+    --gold-light: #e2c97e;
+    --gold-dim: #8a6f2e;
+    --cream: #f4efe6;
+    --cream-dim: #d6cfc2;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background-color: var(--navy);
+    color: var(--cream);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.04) 0%, transparent 60%),
+                      radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 32px 100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* NAV */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0 0;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+    padding-bottom: 20px;
+    margin-bottom: 56px;
+  }
+  .nav a {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav a:hover { color: var(--gold-light); }
+  .nav-center {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(201,168,76,0.3);
+    text-transform: uppercase;
+  }
+
+  /* HEADER DO TÓPICO */
+  .topico-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .eixo-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .topico-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .topico-header .grego {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--gold-dim);
+    margin-bottom: 24px;
+  }
+  .header-rule {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+  }
+  .header-rule span {
+    display: block;
+    height: 1px;
+    width: 80px;
+    background: linear-gradient(to right, transparent, var(--gold-dim));
+  }
+  .header-rule span:last-child {
+    background: linear-gradient(to left, transparent, var(--gold-dim));
+  }
+  .header-rule i { color: var(--gold); font-style: normal; font-size: 14px; }
+
+  /* SEÇÕES */
+  .secao {
+    margin-bottom: 56px;
+  }
+  .secao-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  /* PASSAGENS */
+  .passagem {
+    margin-bottom: 32px;
+    padding-left: 24px;
+    border-left: 2px solid rgba(201,168,76,0.25);
+  }
+  .passagem blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.75;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+  .passagem cite {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold-dim);
+    font-style: normal;
+  }
+
+  /* CORPO DO TEXTO */
+  .corpo p {
+    margin-bottom: 22px;
+    color: var(--cream);
+    text-align: justify;
+  }
+  .corpo h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin: 36px 0 14px;
+    font-style: italic;
+  }
+  .grego-inline {
+    font-style: italic;
+    color: var(--gold-dim);
+  }
+
+  /* HINO */
+  .hino {
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 2px;
+    padding: 36px 40px;
+    margin-top: 8px;
+  }
+  .hino-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .hino-subtitulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--gold-dim);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .hino-refrao {
+    background: rgba(201,168,76,0.07);
+    border-left: 2px solid var(--gold-dim);
+    padding: 14px 20px;
+    margin-bottom: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-light);
+    line-height: 1.7;
+    text-align: center;
+  }
+  .hino-estrofe {
+    margin-bottom: 28px;
+  }
+  .hino-estrofe-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .hino-estrofe p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .hino-nota {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(201,168,76,0.12);
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    color: var(--cream-dim);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  /* SINTESE */
+  .sintese {
+    background: rgba(201,168,76,0.04);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 2px;
+    padding: 32px 36px;
+  }
+  .sintese p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--cream);
+    text-align: justify;
+    margin-bottom: 18px;
+  }
+  .sintese p:last-child { margin-bottom: 0; }
+
+  /* NAVEGAÇÃO INFERIOR */
+  .nav-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(201,168,76,0.12);
+  }
+  .nav-inferior a {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-inferior a:hover { color: var(--gold-light); }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 18px 80px; }
+    .hino { padding: 24px 20px; }
+    .sintese { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="nav">
+    <a href="paulo-teologia-index.html">← Índice</a>
+    <span class="nav-center">Cristologia · I</span>
+    <a href="02-pre-existencia-encarnacao.html">Próximo →</a>
+  </nav>
+
+  <header class="topico-header">
+    <p class="eixo-label">Cristologia · Tópico 1</p>
+    <h1>Senhorio de Cristo</h1>
+    <p class="grego">Kyrios — κύριος</p>
+    <div class="header-rule">
+      <span></span><i>✦</i><span></span>
+    </div>
+  </header>
+
+  <!-- PASSAGENS -->
+  <section class="secao">
+    <h2 class="secao-titulo">Textos Centrais</h2>
+
+    <div class="passagem">
+      <blockquote>"Por isso Deus o exaltou soberanamente e lhe deu o Nome que está acima de todo nome, para que ao nome de Jesus todo joelho se dobre nos céus, na terra e nos abismos, e toda língua proclame que Jesus Cristo é Senhor, para glória de Deus Pai."</blockquote>
+      <cite>Fl 2,9-11</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Pois se confessares com tua boca que Jesus é Senhor e creres em teu coração que Deus o ressuscitou dentre os mortos, serás salvo."</blockquote>
+      <cite>Rm 10,9</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Contudo, para nós há um só Deus, o Pai, de quem tudo provém e para quem tendemos, e um só Senhor, Jesus Cristo, por quem tudo existe e pelo qual existimos."</blockquote>
+      <cite>1 Cor 8,6</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Por isso vos declaro: ninguém que fale movido pelo Espírito de Deus diz 'Jesus é anátema', e ninguém pode dizer 'Jesus é Senhor' senão movido pelo Espírito Santo."</blockquote>
+      <cite>1 Cor 12,3</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Ele é a imagem do Deus invisível, o primogênito de toda a criação, pois nele foram criadas todas as coisas nos céus e na terra, as visíveis e as invisíveis, tronos, soberanias, principados, potestades: tudo foi criado por ele e para ele. Ele é antes de tudo, e tudo nele subsiste. Ele é também a cabeça do corpo, da Igreja; ele é o princípio, o primogênito dentre os mortos, para que em tudo ele seja o primeiro. Pois aprouve a Deus fazer habitar nele toda a plenitude e por ele reconciliar consigo todos os seres, pacificando pelo sangue de sua cruz tanto os da terra como os dos céus."</blockquote>
+      <cite>Cl 1,15-20</cite>
+    </div>
+  </section>
+
+  <!-- ANÁLISE DO GREGO -->
+  <section class="secao">
+    <h2 class="secao-titulo">Análise do Grego</h2>
+    <div class="corpo">
+
+      <h3>O título Kyrios e sua origem</h3>
+      <p>A palavra grega <span class="grego-inline">Κύριος (Kyrios)</span> significa literalmente "Senhor" — aquele que tem autoridade soberana sobre algo ou alguém. No mundo greco-romano, era usada tanto para proprietários de escravos quanto para imperadores e divindades cultuadas nos mistérios pagãos. Mas o peso decisivo do título em Paulo não vem desse contexto pagão — vem da Bíblia grega, a chamada Septuaginta (LXX).</p>
+      <p>A Septuaginta é a tradução grega do Antigo Testamento feita por judeus alexandrinos entre os séculos III e I a.C. Nessa tradução, os tradutores tomaram uma decisão de enorme consequência: cada vez que aparecia no texto hebraico o nome sagrado de Deus — o Tetragrama, יהוה (YHWH), que os judeus não pronunciavam por reverência — eles o substituíram pela palavra <span class="grego-inline">Kyrios</span>. Resultado: em toda a Bíblia grega, <span class="grego-inline">Kyrios</span> é o nome de YHWH, o Deus de Israel. É o nome do Criador, do Libertador do Egito, do Deus da Aliança.</p>
+      <p>Quando Paulo, formado nas Escrituras desde criança como fariseu, chama Jesus de <span class="grego-inline">Kyrios</span>, ele está usando uma palavra que seus leitores judeus e gentios temente a Deus reconheciam imediatamente como o nome divino da LXX. Isso não é acidental — é uma afirmação teológica deliberada e de altíssima densidade: o Senhor que os profetas anunciavam, o Senhor diante de quem todo joelho se dobraria, é Jesus ressuscitado.</p>
+
+      <h3>Filipenses 2,9-11 — o Nome acima de todo nome</h3>
+      <p>Paulo está citando aqui um hino litúrgico que provavelmente já circulava nas comunidades cristãs antes mesmo de ele escrever essa carta (por volta do ano 55 d.C.). O hino narra um movimento em dois tempos: descida (vv. 6-8 — Cristo se humilha até a morte de cruz) e exaltação (vv. 9-11 — Deus o exalta soberanamente).</p>
+      <p>No v. 9, Paulo escreve que Deus concedeu a Jesus <span class="grego-inline">τὸ ὄνομα τὸ ὑπὲρ πᾶν ὄνομα</span> — literalmente "o nome, o que está acima de todo nome". O artigo definido <span class="grego-inline">τό</span> antes de <span class="grego-inline">ὄνομα</span> ("o nome") indica que não se trata de um nome qualquer, mas de <em>o</em> nome por excelência, o nome que todos reconheceriam como supremo. Na tradição judaica, havia apenas um nome acima de todos os nomes: o Tetragrama, o nome de YHWH. Paulo está dizendo que esse nome foi dado a Jesus.</p>
+      <p>Os vv. 10-11 confirmam isso com uma citação direta de Isaías 45,23, onde YHWH declara na primeira pessoa: "Diante de mim todo joelho se dobrará, toda língua jurará." Paulo pega esse texto — em que o sujeito é inequivocamente YHWH — e o aplica a Jesus. Toda a criação se prostrará diante de Jesus e proclamará <span class="grego-inline">Κύριος Ἰησοῦς Χριστός</span> — "Jesus Cristo é Senhor". E isso acontecerá, diz o v. 11, "para glória de Deus Pai" — ou seja, reconhecer o Senhorio de Jesus não é concorrência com o Pai, mas é exatamente a forma pela qual o Pai é glorificado.</p>
+
+      <h3>Romanos 10,9 — a confissão que salva</h3>
+      <p>Este versículo é provavelmente um eco de fórmulas batismais primitivas — aquilo que o candidato ao batismo proclamava publicamente. A estrutura é dupla: confessar <em>com a boca</em> que Jesus é Senhor, e crer <em>no coração</em> que Deus o ressuscitou. Os dois elementos são inseparáveis em Paulo: o Senhorio de Jesus está fundado na ressurreição. Um Cristo não ressuscitado não seria Senhor de nada — seria apenas um profeta morto. É a ressurreição que valida e manifesta o Senhorio que já era seu desde antes da criação.</p>
+      <p>A expressão "confessar com a boca" (<span class="grego-inline">ὁμολογήσῃς ἐν τῷ στόματί σου</span>) tem peso público e comunitário — não é uma opinião privada, mas uma declaração que coloca o crente numa posição definida diante do mundo. No contexto do Império Romano, dizer <span class="grego-inline">Kyrios Iēsous</span> em vez de <span class="grego-inline">Kyrios Kaisar</span> ("Senhor é o César") era potencialmente subversivo. Paulo sabia disso.</p>
+
+      <h3>1 Coríntios 8,6 — a reformulação do Shemá</h3>
+      <p>Este é talvez o texto cristológico mais ousado de todo o corpus paulino. Para entendê-lo, é preciso conhecer o <em>Shemá Israel</em> — a oração central do judaísmo, recitada duas vezes por dia por todo judeu observante, tirada de Deuteronômio 6,4: "Ouve, Israel: o Senhor nosso Deus é o único Senhor" (<span class="grego-inline">Κύριος ὁ θεὸς ἡμῶν Κύριος εἷς ἐστιν</span> na LXX). Essa é a declaração fundamental do monoteísmo israelita — há um só Deus, e esse Deus é YHWH.</p>
+      <p>Paulo, em 1 Cor 8,6, está respondendo a uma questão prática sobre comer carnes sacrificadas a ídolos. Para fundamentar sua resposta, ele reformula o <em>Shemá</em>. Onde o <em>Shemá</em> diz "um só Deus" e "um só Senhor" referindo-se ao mesmo ser (YHWH), Paulo distribui essas expressões entre duas pessoas: "um só Deus, o Pai" e "um só Senhor, Jesus Cristo". Além disso, ele atribui a cada um funções cosmológicas: do Pai "tudo provém" (criação) e "para ele tendemos" (fim último); por Jesus Cristo "tudo existe" (instrumento da criação) e "pelo qual existimos" (instrumento de nossa redenção).</p>
+      <p>O que Paulo está fazendo aqui é incluir Jesus dentro da identidade do Deus único de Israel — não como um segundo deus paralelo, mas como aquele <em>por meio de quem</em> o único Deus age na criação e na salvação. O teólogo britânico Richard Bauckham chamou isso de "cristologia da identidade divina": Paulo não divide o monoteísmo em dois, mas reconhece que a identidade de YHWH sempre incluiu aquele que agora se revelou como Jesus Cristo.</p>
+
+      <h3>1 Coríntios 12,3 — ninguém pode dizer sem o Espírito</h3>
+      <p>Este versículo revela que a confissão <span class="grego-inline">Kyrios Iēsous</span> não é uma conquista intelectual humana — ela é sempre um dom do Espírito Santo. Paulo está tratando de discernimento espiritual: como distinguir o que vem de Deus do que não vem. O critério é simples e radical — quem está no Espírito confessa o Senhorio de Jesus; quem não está não pode fazê-lo autenticamente. Isso mostra que para Paulo o reconhecimento do Senhorio de Cristo é um ato teologal completo, envolvendo as três pessoas da Trindade: o Pai que exalta (Fl 2,9), o Filho que é exaltado, e o Espírito que capacita a confissão.</p>
+    </div>
+  </section>
+
+  <!-- FONTES PATRÍSTICAS -->
+  <section class="secao">
+    <h2 class="secao-titulo">Fontes Patrísticas</h2>
+    <div class="corpo">
+      <p>Inácio de Antioquia é o primeiro testemunho externo claro do Senhorio como dado confessional pleno: <em>"Há um só médico, carnal e espiritual, gerado e ingênito, Deus vindo na carne, vida verdadeira na morte"</em> (<em>Ad Ephesios</em> 7,2). A expressão combina "gerado e ingênito" de forma filosoficamente precisa: Cristo é ingênito enquanto Filho eterno do Pai, e gerado enquanto nascido de Maria no tempo.</p>
+      <p>Cirilo de Alexandria, nos <em>Commentarii in Epistolam ad Romanos</em>, destaca que a confissão <span class="grego-inline">Kyrios Iēsous</span> não é mera declaração devocional — ela insere o crente na realidade da ressurreição. Confessar o Senhor é participar de sua vida ressuscitada.</p>
+      <p>João Crisóstomo, em suas homilias sobre Filipenses, comenta o hino de Fl 2,6-11 e afirma que o Nome dado a Jesus é o próprio Nome divino — YHWH — e que isso constitui a suprema glorificação do Filho pelo Pai após a humilhação da cruz.</p>
+    </div>
+  </section>
+
+  <!-- SÍNTESE TEOLÓGICA -->
+  <section class="secao">
+    <h2 class="secao-titulo">Síntese Teológica</h2>
+    <div class="sintese">
+      <p>O Senhorio de Cristo em Paulo não é um título honorífico tardio — é o núcleo da confissão cristã mais primitiva, anterior às próprias cartas paulinas. Paulo cita em Rm 10,9 e Fl 2,6-11 fórmulas que ele mesmo reconhece como recebidas, não inventadas por ele.</p>
+      <p>Esse Senhorio tem três dimensões que se implicam mutuamente. A dimensão <em>cosmológica</em>: Cristo é Senhor de toda a criação porque tudo foi criado por ele e para ele (Cl 1,16-17; 1 Cor 8,6). Seu Senhorio não começa com a ressurreição — a ressurreição o manifesta e o universaliza, mas o Filho já era Senhor antes da criação. A dimensão <em>soteriológica</em>: o Senhorio de Cristo é exercido concretamente através de sua morte e ressurreição. Por isso confessar o Senhorio implica crer na ressurreição (Rm 10,9). A dimensão <em>escatológica</em>: o Senhorio de Cristo ainda não é universalmente reconhecido na história — será plenamente manifestado no fim, quando toda criatura se prostrará diante dele (Fl 2,10-11).</p>
+      <p>Para Paulo, confessar "Jesus Cristo é Senhor" não é apenas uma declaração devocional — é o ato que define a identidade cristã, insere o crente na lógica da salvação, e posiciona toda a existência humana em relação ao único que tem autoridade sobre a vida e a morte.</p>
+    </div>
+  </section>
+
+  <!-- HINO -->
+  <section class="secao">
+    <h2 class="secao-titulo">Hino ao Senhorio de Cristo</h2>
+    <div class="hino">
+      <p class="hino-titulo">Hino ao Senhorio de Cristo</p>
+      <p class="hino-subtitulo">estruturado na sequência da Sequência de Pentecostes</p>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-estrofe">
+        <p class="hino-estrofe-titulo">I — Invocação</p>
+        <p>Vem, Senhor, que o céu proclama,</p>
+        <p>Vem, que a terra te aclama,</p>
+        <p>Filho eterno do Pai.</p>
+        <p>Tu que és antes de tudo,</p>
+        <p>Tu que és o começo e o fim,</p>
+        <p>Senhor de tudo que há.</p>
+      </div>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-estrofe">
+        <p class="hino-estrofe-titulo">II — Pré-existência</p>
+        <p>Na glória do Pai reinavas,</p>
+        <p>Antes que o mundo existisse,</p>
+        <p>Tua luz nunca se apagou.</p>
+        <p>Não como presa retiveste</p>
+        <p>A igualdade divina —</p>
+        <p>Por amor te esvaziaste.</p>
+      </div>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-estrofe">
+        <p class="hino-estrofe-titulo">III — Encarnação</p>
+        <p>Nasceste de mulher, Senhor,</p>
+        <p>Entraste na nossa carne,</p>
+        <p>Tomaste condição de servo.</p>
+        <p>O Eterno veio ao tempo,</p>
+        <p>O Alto desceu ao chão,</p>
+        <p>O Rico fez-se pobre por nós.</p>
+      </div>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-estrofe">
+        <p class="hino-estrofe-titulo">IV — Cruz e morte</p>
+        <p>Obedeceste até a morte,</p>
+        <p>Morte de cruz, ó Senhor,</p>
+        <p>Não recuaste diante dela.</p>
+        <p>O Nome acima de todo nome</p>
+        <p>Pendeu no madeiro por nós —</p>
+        <p>Amor que a morte não vence.</p>
+      </div>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-estrofe">
+        <p class="hino-estrofe-titulo">V — Ressurreição e exaltação</p>
+        <p>Deus te exaltou soberanamente,</p>
+        <p>Deu-te o Nome que tudo excede,</p>
+        <p>Senhor da vida e da morte.</p>
+        <p>Todo joelho se dobra agora,</p>
+        <p>Todo abismo te reconhece —</p>
+        <p>Cristo ressuscitou, aleluia!</p>
+      </div>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-estrofe">
+        <p class="hino-estrofe-titulo">VI — Confissão da Igreja</p>
+        <p>Ninguém diz sem o Espírito:</p>
+        <p><em>Jesus Cristo é o Senhor</em> —</p>
+        <p>Dom do alto, luz no coração.</p>
+        <p>A Igreja inteira proclama,</p>
+        <p>Em todo tempo e lugar:</p>
+        <p>Só tu és o Senhor, só tu.</p>
+      </div>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-estrofe">
+        <p class="hino-estrofe-titulo">VII — Escatologia</p>
+        <p>Virá o dia, ó Senhor,</p>
+        <p>Em que toda língua cantará,</p>
+        <p>Nos céus, na terra, nos abismos.</p>
+        <p>Não haverá mais silêncio,</p>
+        <p>Não haverá mais dúvida —</p>
+        <p>Jesus Cristo é o Senhor!</p>
+      </div>
+
+      <div class="hino-refrao">
+        Jesus Cristo é o Senhor,<br>
+        Nome acima de todo nome,<br>
+        Glória ao Pai, ao Filho, ao Amor.
+      </div>
+
+      <div class="hino-nota">
+        <strong>Nota estrutural:</strong> A Sequência de Pentecostes (<em>Veni Sancte Spiritus</em>, atribuída a Estêvão Langton, séc. XIII) organiza-se em estrofes de três versos com rima interna, movendo-se de invocação para descrição, de descrição para súplica, e de súplica para resolução. Este hino segue o mesmo arco: invocação → pré-existência → encarnação → cruz → ressurreição → confissão eclesial → escatologia, espelhando o movimento teológico do hino de Fl 2,6-11.
+      </div>
+    </div>
+  </section>
+
+  <nav class="nav-inferior">
+    <a href="paulo-teologia-index.html">← Índice geral</a>
+    <a href="02-pre-existencia-encarnacao.html">Pré-existência e encarnação →</a>
+  </nav>
+
+</div>
+</body>
+</html>

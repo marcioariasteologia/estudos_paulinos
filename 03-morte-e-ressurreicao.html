@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morte e Ressurreição — Teologia Paulina</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2e;
+    --gold: #c9a84c;
+    --gold-light: #e2c97e;
+    --gold-dim: #8a6f2e;
+    --cream: #f4efe6;
+    --cream-dim: #d6cfc2;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background-color: var(--navy); color: var(--cream); font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.85; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.04) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 32px 100px; position: relative; z-index: 1; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 20px; border-bottom: 1px solid rgba(201,168,76,0.12); margin-bottom: 56px; }
+  .nav a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav a:hover { color: var(--gold-light); }
+  .nav-center { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px; color: rgba(201,168,76,0.3); text-transform: uppercase; }
+  .topico-header { text-align: center; margin-bottom: 56px; }
+  .eixo-label { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 4px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 16px; }
+  .topico-header h1 { font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 38px); font-weight: 700; color: var(--gold-light); letter-spacing: 2px; line-height: 1.2; margin-bottom: 10px; }
+  .topico-header .grego { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--gold-dim); margin-bottom: 24px; }
+  .header-rule { display: flex; align-items: center; gap: 16px; justify-content: center; }
+  .header-rule span { display: block; height: 1px; width: 80px; background: linear-gradient(to right, transparent, var(--gold-dim)); }
+  .header-rule span:last-child { background: linear-gradient(to left, transparent, var(--gold-dim)); }
+  .header-rule i { color: var(--gold); font-style: normal; font-size: 14px; }
+  .secao { margin-bottom: 56px; }
+  .secao-titulo { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 600; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 28px; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .passagem { margin-bottom: 32px; padding-left: 24px; border-left: 2px solid rgba(201,168,76,0.25); }
+  .passagem blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; line-height: 1.75; color: var(--cream); margin-bottom: 10px; }
+  .passagem cite { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); font-style: normal; }
+  .corpo p { margin-bottom: 22px; color: var(--cream); text-align: justify; }
+  .corpo h3 { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500; color: var(--gold-light); margin: 36px 0 14px; font-style: italic; }
+  .grego-inline { font-style: italic; color: var(--gold-dim); }
+  .sintese { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.15); border-radius: 2px; padding: 32px 36px; }
+  .sintese p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.8; color: var(--cream); text-align: justify; margin-bottom: 18px; }
+  .sintese p:last-child { margin-bottom: 0; }
+  .nav-inferior { display: flex; justify-content: space-between; align-items: center; margin-top: 72px; padding-top: 28px; border-top: 1px solid rgba(201,168,76,0.12); }
+  .nav-inferior a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-inferior a:hover { color: var(--gold-light); }
+  @media (max-width: 600px) { .container { padding: 0 18px 80px; } .sintese { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="nav">
+    <a href="02-pre-existencia-encarnacao.html">← Anterior</a>
+    <span class="nav-center">Cristologia · III</span>
+    <a href="paulo-teologia-index.html">Índice →</a>
+  </nav>
+
+  <header class="topico-header">
+    <p class="eixo-label">Cristologia · Tópico 3</p>
+    <h1>Morte e Ressurreição</h1>
+    <p class="grego">Kerygma — κήρυγμα</p>
+    <div class="header-rule">
+      <span></span><i>✦</i><span></span>
+    </div>
+  </header>
+
+  <!-- PASSAGENS -->
+  <section class="secao">
+    <h2 class="secao-titulo">Textos Centrais</h2>
+
+    <div class="passagem">
+      <blockquote>"Porque eu vos transmiti em primeiro lugar o que eu mesmo recebi: que Cristo morreu por nossos pecados segundo as Escrituras; que foi sepultado e que ressuscitou ao terceiro dia segundo as Escrituras; que apareceu a Cefas e depois aos Doze."</blockquote>
+      <cite>1 Cor 15,3-5</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"A palavra da cruz é loucura para os que se perdem, mas para nós, os que somos salvos, é força de Deus."</blockquote>
+      <cite>1 Cor 1,18</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Pois decidi não saber entre vós senão Jesus Cristo, e este crucificado."</blockquote>
+      <cite>1 Cor 2,2</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Ele foi entregue por causa de nossas faltas e ressuscitou para nossa justificação."</blockquote>
+      <cite>Rm 4,25</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Mas se Cristo não ressuscitou, vã é a nossa pregação, vã também é a vossa fé. Seríamos até falsas testemunhas de Deus, pois teríamos atestado contra Deus que ele ressuscitou Cristo, ao qual não ressuscitou, se é verdade que os mortos não ressuscitam. Pois se os mortos não ressuscitam, Cristo também não ressuscitou. E se Cristo não ressuscitou, vã é a vossa fé, ainda estais em vossos pecados. Então também os que morreram em Cristo pereceram. Se é somente nesta vida que temos esperança em Cristo, somos os mais miseráveis de todos os homens."</blockquote>
+      <cite>1 Cor 15,14-19</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Com efeito, a vida que ele vive, vive-a para Deus. Assim também vós: considerai-vos mortos para o pecado e vivos para Deus em Cristo Jesus."</blockquote>
+      <cite>Rm 6,10-11</cite>
+    </div>
+
+    <div class="passagem">
+      <blockquote>"Mas Deus, rico em misericórdia, pelo grande amor com que nos amou, quando estávamos mortos por causa de nossas faltas, nos vivificou com Cristo — é pela graça que fostes salvos —, e conosco nos ressuscitou e nos fez sentar nos céus, em Cristo Jesus."</blockquote>
+      <cite>Ef 2,4-6</cite>
+    </div>
+  </section>
+
+  <!-- ANÁLISE DO GREGO -->
+  <section class="secao">
+    <h2 class="secao-titulo">Análise do Grego</h2>
+    <div class="corpo">
+
+      <h3>O kerygma mais antigo — 1 Cor 15,3-5</h3>
+      <p>Este texto é provavelmente o documento cristológico mais antigo que possuímos — anterior às próprias cartas de Paulo e possivelmente anterior aos Evangelhos escritos. Paulo introduz-o com duas expressões técnicas que indicam transmissão oral formal: <span class="grego-inline">παρέλαβον (parelabon</span>, "recebi") e <span class="grego-inline">παρέδωκα (paredōka</span>, "transmiti"). Esses dois verbos eram usados no judaísmo rabínico para descrever a cadeia de transmissão fidedigna da tradição — um mestre <em>recebe</em> de seu mestre e <em>transmite</em> aos seus discípulos. Paulo está dizendo explicitamente que esse conteúdo não é invenção sua — ele o <em>recebeu</em> de outros, e o está <em>transmitindo</em> aos coríntios como algo que antecede e fundamenta tudo o mais.</p>
+      <p>Quando Paulo recebeu essa fórmula? Provavelmente quando visitou Jerusalém pela primeira vez após sua conversão, por volta do ano 35-36 d.C. — apenas alguns anos depois da morte e ressurreição de Jesus. Em Gl 1,18 ele menciona que foi a Jerusalém e ficou quinze dias com Pedro. É muito provável que tenha sido nessa ocasião que recebeu essa fórmula confessional.</p>
+      <p>A fórmula tem quatro elementos, cada um marcado pela conjunção <span class="grego-inline">ὅτι</span> ("que"), que introduz conteúdo declarativo. Primeiro: "Cristo morreu por nossos pecados" — <span class="grego-inline">ἀπέθανεν ὑπὲρ τῶν ἁμαρτιῶν ἡμῶν</span>. A preposição <span class="grego-inline">ὑπέρ</span> ("por", "em favor de", "em lugar de") tem aqui um peso soteriológico enorme. Não diz simplesmente que Cristo morreu — diz que morreu <em>por causa dos nossos pecados</em>, <em>em favor de nós</em>, <em>no nosso lugar</em>. A morte de Cristo não é um acidente histórico — é um ato deliberado com caráter substitutivo e expiatório.</p>
+      <p>Segundo: "foi sepultado" — <span class="grego-inline">ἐτάφη</span>. A menção do sepultamento não é um detalhe desnecessário. Ele confirma que a morte foi real e completa — não um desmaio, não uma aparência. O corpo de Jesus foi colocado numa tumba. Isso tornará mais contundente a afirmação seguinte: o que ressuscitou foi o mesmo que foi sepultado.</p>
+      <p>Terceiro: "ressuscitou ao terceiro dia" — <span class="grego-inline">ἐγήγερται τῇ ἡμέρᾳ τῇ τρίτῃ</span>. O verbo <span class="grego-inline">ἐγήγερται (egēgertai)</span> está no perfeito passivo — um tempo verbal que em grego indica uma ação passada com consequências que permanecem no presente. Cristo <em>foi ressuscitado</em> — passivo, porque é Deus quem o ressuscita (cf. Rm 4,24) — e essa ressurreição permanece válida e eficaz no momento em que Paulo escreve. Não foi um evento do passado encerrado em si mesmo — é uma realidade presente e permanente.</p>
+      <p>Quarto: "apareceu a Cefas e depois aos Doze" — <span class="grego-inline">ὤφθη Κηφᾷ εἶτα τοῖς δώδεκα</span>. O verbo <span class="grego-inline">ὤφθη (ōphthē)</span> é o aoristo passivo de <span class="grego-inline">horaō</span> ("ver") — literalmente "foi visto", "apareceu". Esse mesmo verbo é usado na LXX para as aparições de YHWH no Antigo Testamento. Paulo não está falando de uma experiência subjetiva interior, de uma visão mística ou de uma metáfora. Está usando linguagem de aparição real, visível, objetiva.</p>
+
+      <h3>"A palavra da cruz" — 1 Cor 1,18</h3>
+      <p>A expressão <span class="grego-inline">ὁ λόγος ὁ τοῦ σταυροῦ</span> — "a palavra da cruz" — é única em Paulo. <span class="grego-inline">Logos</span> aqui não é apenas "mensagem" ou "discurso" — é a palavra que comunica e torna presente uma realidade. "A palavra da cruz" não é simplesmente um relato sobre o que aconteceu no Calvário — é o anúncio que torna a cruz eficaz na vida de quem a recebe pela fé.</p>
+      <p>Paulo diz que essa palavra é <span class="grego-inline">μωρία (mōria</span>, "loucura", "estultícia") para os que se perdem, e <span class="grego-inline">δύναμις θεοῦ (dynamis theou</span>, "força/poder de Deus") para os que se salvam. O contraste é absoluto. Não se trata de uma questão de perspectiva cultural — trata-se de uma divisão ontológica entre dois modos de existência.</p>
+      <p>Por que a cruz seria loucura? No mundo greco-romano, a crucificação era reservada a escravos e criminosos das classes mais baixas — era a morte mais infamante e desonrosa que existia. Propor que o Filho de Deus morreu dessa forma era ofensivo para o senso de decoro dos gregos e escandalizava os judeus, que esperavam um Messias triunfante (cf. 1 Cor 1,23: "para os judeus, escândalo; para os gentios, loucura"). Paulo não suaviza esse escândalo — ele o abraça e o proclama como o ponto exato onde a sabedoria de Deus supera toda sabedoria humana.</p>
+
+      <h3>"Entregue por nossas faltas, ressuscitou para nossa justificação" — Rm 4,25</h3>
+      <p>Este versículo é outro eco de fórmula litúrgica ou confessional pré-paulina. O paralelismo é preciso: "entregue por causa de nossas faltas" / "ressuscitado para nossa justificação". Cada membro da frase corresponde a um dos dois atos centrais da história da salvação.</p>
+      <p>A preposição usada em ambos os casos é <span class="grego-inline">διά (dia)</span> seguida de acusativo, que indica causa ou motivo: "por causa de". Cristo foi entregue <em>por causa de</em> (<span class="grego-inline">διὰ τὰ παραπτώματα ἡμῶν</span>) nossas faltas. E ressuscitou <em>por causa de</em> (<span class="grego-inline">διὰ τὴν δικαίωσιν ἡμῶν</span>) nossa justificação. Essa segunda afirmação é teologicamente densa e frequentemente subestimada: a ressurreição não é apenas a confirmação ou o "prêmio" pela morte de Cristo — ela é constitutivamente necessária para a nossa justificação. Se Cristo tivesse apenas morrido e permanecido morto, teríamos um sacrifício, mas não um Senhor vivo que nos justifica.</p>
+
+      <h3>"Se Cristo não ressuscitou..." — 1 Cor 15,14-19</h3>
+      <p>Este é o texto em que Paulo expõe com máxima clareza o que está em jogo na ressurreição. Ele constrói uma série de condicionais encadeadas — se A, então B; se B, então C — para mostrar que negar a ressurreição destrói completamente o edifício da fé cristã.</p>
+      <p>O argumento começa com uma premissa que alguns coríntios aparentemente aceitavam: "não há ressurreição dos mortos" (v. 12). Paulo não ataca essa posição diretamente — ele mostra suas consequências lógicas. Se não há ressurreição dos mortos em geral, então Cristo também não ressuscitou. Se Cristo não ressuscitou, então a pregação dos apóstolos é <span class="grego-inline">κενή (kenē</span>, "vazia", "sem conteúdo", "inútil"). Se a pregação é vazia, a fé dos coríntios também é vazia. Mais ainda: os apóstolos seriam <span class="grego-inline">ψευδομάρτυρες τοῦ θεοῦ (pseudomartyres tou theou</span>, "falsas testemunhas de Deus") — porque teriam atestado algo que Deus não fez.</p>
+      <p>E as consequências práticas seriam devastadoras: os coríntios ainda estariam em seus pecados (v. 17); os cristãos que morreram teriam perecido definitivamente (v. 18); e os cristãos vivos seriam <span class="grego-inline">ἐλεεινότεροι πάντων ἀνθρώπων (eleenoteroi pantōn anthrōpōn</span>, "os mais dignos de compaixão de todos os homens") — porque teriam sacrificado tudo nesta vida por uma esperança falsa. A lógica de Paulo é implacável: a ressurreição não é um adorno opcional da fé cristã. É seu fundamento.</p>
+    </div>
+  </section>
+
+  <!-- FONTES PATRÍSTICAS -->
+  <section class="secao">
+    <h2 class="secao-titulo">Fontes Patrísticas</h2>
+    <div class="corpo">
+      <p>Inácio de Antioquia, em sua Carta aos Esmirnenses (c. 107 d.C.), insiste com força na realidade corporal da ressurreição contra os docetas que a negavam: <em>"Eu sei e creio que ele estava no corpo mesmo depois da ressurreição. E quando veio aos que eram de Pedro, disse-lhes: 'Tomai, apalpai-me e vede que não sou um espírito sem corpo'"</em> (<em>Ad Smyrnaeos</em> 3,1-2).</p>
+      <p>Justino Mártir, no <em>Diálogo com Trifão</em> (séc. II), desenvolve amplamente a interpretação de Is 53 como profecia da morte de Cristo — o que confirma que essa leitura é anterior a Paulo e faz parte da tradição hermenêutica cristã primitiva.</p>
+      <p>Tertuliano, em <em>De Resurrectione Carnis</em> (séc. II-III), polemiza contra os gnósticos que espiritualizam a ressurreição e defende que o próprio corpo de carne ressuscita — apoiando-se extensamente em 1 Cor 15. Para Tertuliano, a ressurreição corporal não é um embaraço para a fé — é a sua afirmação mais radical: Deus levou a sério a criação que criou.</p>
+    </div>
+  </section>
+
+  <!-- SÍNTESE TEOLÓGICA -->
+  <section class="secao">
+    <h2 class="secao-titulo">Síntese Teológica</h2>
+    <div class="sintese">
+      <p>A morte e a ressurreição de Cristo não são dois eventos separados que Paulo menciona juntos por convenção — são os dois polos inseparáveis de um único ato redentor. A morte sem a ressurreição seria tragédia sem redenção. A ressurreição sem a morte seria glória sem expiação. Juntas, elas formam o que Paulo chama de <em>kerygma</em> — o anúncio central, o núcleo duro de tudo o que ele prega.</p>
+      <p>O que torna esse kerygma radicalmente novo no contexto do mundo antigo é a afirmação de que um ser humano concreto, identificado pelo nome (Jesus), pelo título (Cristo), pela morte específica (crucificado) e pelo tempo preciso (ao terceiro dia), ressuscitou bodily dos mortos e está vivo como Senhor do universo. Não é um mito de morte e renascimento de uma divindade cósmica — é um evento histórico datável com consequências eternas.</p>
+      <p>Para Paulo, esse kerygma não é apenas informação a ser aceita intelectualmente — é uma realidade que transforma quem a recebe. Quem crê que Cristo morreu e ressuscitou <em>por ele</em> passa a viver de uma forma nova: morto para o pecado, vivo para Deus (Rm 6,10-11). A morte e ressurreição de Cristo não ficam do lado de fora do crente como um evento externo admirável — elas entram nele pelo batismo, pela fé, pelo Espírito, e reconfiguram sua existência de dentro para fora.</p>
+    </div>
+  </section>
+
+  <nav class="nav-inferior">
+    <a href="02-pre-existencia-encarnacao.html">← Pré-existência e encarnação</a>
+    <a href="paulo-teologia-index.html">Índice geral</a>
+  </nav>
+
+</div>
+</body>
+</html>
