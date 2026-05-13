@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cristo como Segundo Adão — Teologia Paulina</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #0d1b2e; --gold: #c9a84c; --gold-light: #e2c97e; --gold-dim: #8a6f2e; --cream: #f4efe6; --cream-dim: #d6cfc2; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background-color: var(--navy); color: var(--cream); font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.85; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.04) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 32px 100px; position: relative; z-index: 1; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 20px; border-bottom: 1px solid rgba(201,168,76,0.12); margin-bottom: 56px; }
+  .nav a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav a:hover { color: var(--gold-light); }
+  .nav-center { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px; color: rgba(201,168,76,0.3); text-transform: uppercase; }
+  .topico-header { text-align: center; margin-bottom: 64px; }
+  .eixo-label { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 4px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 16px; }
+  .topico-header h1 { font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 38px); font-weight: 700; color: var(--gold-light); letter-spacing: 2px; line-height: 1.2; margin-bottom: 10px; }
+  .topico-header .grego { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--gold-dim); margin-bottom: 24px; }
+  .header-rule { display: flex; align-items: center; gap: 16px; justify-content: center; }
+  .header-rule span { display: block; height: 1px; width: 80px; background: linear-gradient(to right, transparent, var(--gold-dim)); }
+  .header-rule span:last-child { background: linear-gradient(to left, transparent, var(--gold-dim)); }
+  .header-rule i { color: var(--gold); font-style: normal; font-size: 14px; }
+  .secao-titulo { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .unidade { margin-bottom: 64px; }
+  .passagem { background: rgba(201,168,76,0.04); border-left: 3px solid rgba(201,168,76,0.4); padding: 24px 28px; }
+  .passagem-ref { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
+  .passagem blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; line-height: 1.8; color: var(--cream); }
+  .analise { border-left: 3px solid rgba(201,168,76,0.12); padding: 28px 28px 4px; }
+  .analise-titulo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; font-weight: 500; color: var(--gold-light); margin-bottom: 16px; }
+  .analise p { margin-bottom: 20px; color: var(--cream); text-align: justify; }
+  .gi { font-style: italic; color: var(--gold-dim); }
+  .secao-final { margin-bottom: 56px; }
+  .secao-final-titulo { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 28px; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .secao-final p { margin-bottom: 20px; color: var(--cream); text-align: justify; }
+  .sintese-box { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.15); border-radius: 2px; padding: 32px 36px; }
+  .sintese-box p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.85; color: var(--cream); text-align: justify; margin-bottom: 18px; }
+  .sintese-box p:last-child { margin-bottom: 0; }
+  .nav-inferior { display: flex; justify-content: space-between; align-items: center; margin-top: 72px; padding-top: 28px; border-top: 1px solid rgba(201,168,76,0.12); flex-wrap: wrap; gap: 12px; }
+  .nav-inferior a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-inferior a:hover { color: var(--gold-light); }
+  @media (max-width: 600px) { .container { padding: 0 18px 80px; } .passagem { padding: 18px 16px; } .analise { padding: 20px 16px 4px; } .sintese-box { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="nav">
+    <a href="05-hinos-cristologicos.html">← Anterior</a>
+    <span class="nav-center">Cristologia · VI</span>
+    <a href="07-mediador-e-sacerdote.html">Próximo →</a>
+  </nav>
+
+  <header class="topico-header">
+    <p class="eixo-label">Cristologia · Tópico 6</p>
+    <h1>Cristo como Segundo Adão</h1>
+    <p class="grego">Typologia — τυπολογία · Rm 5 · 1 Cor 15</p>
+    <div class="header-rule"><span></span><i>✦</i><span></span></div>
+  </header>
+
+  <h2 class="secao-titulo">Passagens e Análise</h2>
+
+  <!-- 1 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Rm 5,12-14</p>
+      <blockquote>"Por isso, assim como por um só homem o pecado entrou no mundo, e pelo pecado a morte, assim também a morte se propagou a todos os homens, porque todos pecaram. Pois havia pecado no mundo antes da Lei; mas o pecado não é imputado onde não há Lei. Contudo, a morte reinou de Adão a Moisés, mesmo sobre os que não pecaram com uma transgressão semelhante à de Adão, o qual é figura daquele que havia de vir."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Adão como typos — a figura que anuncia o que virá</p>
+      <p>Este texto introduz a tipologia Adão-Cristo que Paulo desenvolverá nos versículos seguintes. A palavra decisiva está no último versículo: Adão é chamado de <span class="gi">τύπος (typos)</span> — "figura", "tipo", "prefiguração" — daquele que havia de vir. O conceito de <span class="gi">typos</span> na exegese paulina não é uma mera comparação literária — é uma categoria teológica precisa: o <span class="gi">typos</span> é um evento ou pessoa real do passado que, por disposição divina, antecipa e prefigura um evento ou pessoa futura ainda maior. Adão é real — não é um mito — mas sua função na história da salvação é apontar para além de si mesmo, para Cristo.</p>
+      <p>A afirmação de que "o pecado entrou no mundo por um só homem" — <span class="gi">δι' ἑνὸς ἀνθρώπου ἡ ἁμαρτία εἰς τὸν κόσμον εἰσῆλθεν</span> — estabelece o princípio de solidariedade: um único ser humano pode determinar o destino de todos os outros. Esse princípio de solidariedade é ao mesmo tempo o fundamento do problema (Adão) e da solução (Cristo). Se um pode levar todos à morte, um também pode levar todos à vida.</p>
+      <p>A expressão "porque todos pecaram" — <span class="gi">ἐφ' ᾧ πάντες ἥμαρτον</span> — é uma das mais debatidas de todo o Novo Testamento. A preposição <span class="gi">ἐφ' ᾧ</span> pode ser traduzida de três formas: "porque" (causal — todos morreram porque todos pecaram pessoalmente), "no qual" (locativo — todos pecaram em Adão, posição de Agostinho que fundamenta a doutrina do pecado original no sentido ocidental) ou "em razão do qual" (relativo — a morte se propagou em razão do pecado de Adão). A tradição católica ocidental, seguindo Agostinho, leu o texto como afirmando que todos de algum modo pecaram em Adão — uma solidariedade ontológica com o primeiro pecado. A exegese grega antiga tendia a ler no sentido de que cada pessoa morreu em razão do seu próprio pecado, mas esse pecado individual tornou-se possível e inevitável pela condição herdada de Adão. As duas leituras não são mutuamente exclusivas e ambas convergem para o mesmo resultado: a condição humana universal de pecado e morte tem sua origem em Adão.</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Rm 5,15-19</p>
+      <blockquote>"Mas o dom gratuito não é como a falta. Se pela falta de um só os muitos morreram, muito mais a graça de Deus e o dom conferido pela graça do único homem Jesus Cristo se derramou em abundância sobre os muitos. E o dom não é como o efeito do pecado de um só. Pois o julgamento que partiu de um redundou em condenação, mas o dom gratuito, partindo de muitas faltas, redundou em justificação. Pois se pela falta de um só a morte reinou por meio de um só, muito mais os que recebem a abundância da graça e do dom da justiça reinarão na vida por meio de um só, Jesus Cristo. Portanto, assim como a falta de um só conduziu todos os homens à condenação, assim também o ato justo de um só conduziu todos os homens à justificação que dá a vida. Pois assim como pela desobediência de um só homem os muitos foram constituídos pecadores, assim também pela obediência de um só os muitos serão constituídos justos."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">O paralelismo assimétrico — o dom supera a falta</p>
+      <p>Este é o coração da tipologia adâmica em Paulo. O argumento é construído sobre uma série de paralelismos entre Adão e Cristo, mas com uma assimetria fundamental que Paulo sublinha repetidamente: o dom de Cristo supera — <span class="gi">πολλῷ μᾶλλον (pollō mallon</span> — "muito mais") — a falta de Adão. O "muito mais" não é retórica — é uma afirmação teológica precisa: a graça não simplesmente repara o dano causado pelo pecado, ela o excede de forma absolutamente desproporcionada.</p>
+      <p>Paulo articula o paralelismo em três pares. Primeiro: "pela falta de um só, os muitos morreram / pela graça do único homem Jesus Cristo, o dom se derramou sobre os muitos." O esquema é o mesmo — um só, os muitos — mas os conteúdos são opostos: morte versus graça abundante. Segundo: "o julgamento de um redundou em condenação / o dom gratuito, partindo de muitas faltas, redundou em justificação." Aqui Paulo observa uma assimetria adicional: enquanto o pecado de Adão era um único ato, o dom de Cristo responde a <em>muitas</em> faltas — a graça é mais poderosa que a acumulação histórica do pecado. Terceiro: "pela desobediência de um só, os muitos foram constituídos pecadores / pela obediência de um só, os muitos serão constituídos justos."</p>
+      <p>Este terceiro par é o mais teologicamente preciso. Paulo fala de <span class="gi">παρακοή (parakoē</span> — "desobediência") de Adão e de <span class="gi">ὑπακοή (hypakoē</span> — "obediência") de Cristo. O pecado de Adão não foi apenas um ato moral errado — foi um ato de desobediência que definiu a condição de toda a humanidade que dele descende. Da mesma forma, a obediência de Cristo — que culmina na aceitação da cruz (cf. Fl 2,8: "tornando-se obediente até a morte") — é um ato que redefine a condição de toda a humanidade que se une a ele. Os verbos "foram constituídos" e "serão constituídos" — <span class="gi">κατεστάθησαν / κατασταθήσονται</span> — indicam uma mudança de status real e objetiva, não apenas imputada externamente: em Adão a humanidade foi <em>tornada</em> pecadora; em Cristo ela <em>será tornada</em> justa.</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">1 Cor 15,21-22</p>
+      <blockquote>"Pois, assim como é por um homem que vem a morte, é também por um homem que vem a ressurreição dos mortos. Pois assim como em Adão todos morrem, assim também em Cristo todos serão vivificados."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Em Adão / em Cristo — dois âmbitos de existência</p>
+      <p>Este versículo é a formulação mais comprimida e mais precisa da tipologia adâmica em Paulo. Dois elementos merecem atenção especial: a estrutura "em Adão / em Cristo" e a abrangência do "todos".</p>
+      <p>As expressões <span class="gi">ἐν τῷ Ἀδάμ (en tō Adam)</span> e <span class="gi">ἐν τῷ Χριστῷ (en tō Christō)</span> não são simplesmente "por causa de Adão" e "por causa de Cristo" — elas descrevem dois âmbitos ou esferas de existência. Estar "em Adão" significa pertencer à humanidade adâmica: solidária com o primeiro pecado, sujeita à morte, apartada de Deus. Estar "em Cristo" significa pertencer à humanidade nova inaugurada pela ressurreição: solidária com a obediência e a vitória de Cristo, destinada à vida plena. Esses dois âmbitos não são abstratos — correspondem a dois modos reais de existência humana, e a transição de um para o outro se dá pelo batismo e pela fé.</p>
+      <p>A abrangência do "todos" em cada caso — <span class="gi">πάντες (pantes)</span> — é objeto de debate teológico desde os primeiros séculos. Em Adão, "todos morrem" — a universalidade da morte é inequívoca: não há ser humano que escape. Em Cristo, "todos serão vivificados" — o alcance desse "todos" é mais complexo. Paulo não está afirmando aqui o apocatastase (a salvação universal de todos sem exceção, como defendeu Orígenes) — o contexto imediato e o conjunto do pensamento paulino mostram que a vivificação em Cristo é real mas não automática: ela é recebida pela fé e pelo batismo. O "todos em Cristo" significa "todos os que estão em Cristo" — o que não exclui a possibilidade real de que alguns não estejam.</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">1 Cor 15,45-49</p>
+      <blockquote>"Assim também está escrito: O primeiro homem, Adão, tornou-se alma vivente; o último Adão tornou-se espírito vivificante. Mas não é o espiritual que vem primeiro, e sim o psíquico; depois vem o espiritual. O primeiro homem é da terra, terreno; o segundo homem é do céu. Qual o terreno, tais também os terrenos; e qual o celestial, tais também os celestiais. E assim como trouxemos a imagem do homem de terra, traremos também a imagem do celestial."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Primeiro Adão e último Adão — psíquico e pneumático</p>
+      <p>Esta passagem desenvolve a tipologia adâmica no contexto específico da ressurreição dos morpos. Paulo está argumentando contra os que negam a ressurreição corporal, mostrando que há dois tipos de corpo — o psíquico e o pneumático — e que o segundo não anula o primeiro mas o transforma e supera.</p>
+      <p>Paulo cita Gn 2,7 — "o homem tornou-se alma vivente" (<span class="gi">ψυχὴν ζῶσαν</span>) — e o contrasta com Cristo, que ele chama de "último Adão" (<span class="gi">ἔσχατος Ἀδάμ</span>) e descreve como "espírito vivificante" (<span class="gi">πνεῦμα ζωοποιοῦν</span>). A diferença é decisiva: Adão <em>recebeu</em> vida — foi vivificado por Deus ao ser criado. Cristo, ao ressuscitar, tornou-se ele mesmo <em>fonte</em> de vida — não apenas vive, mas vivifica, comunica vida aos outros. O primeiro Adão é passivo no receber a vida; o último Adão é ativo no comunicá-la.</p>
+      <p>O título "último Adão" — <span class="gi">ἔσχατος Ἀδάμ</span> — é singular em Paulo e carrega peso escatológico: Cristo não é apenas o "segundo" Adão num sentido cronológico — é o <em>último</em>, o definitivo, o que encerra e supera a série. Não haverá um terceiro. A humanidade nova que Cristo inaugura não será substituída por outra — é o estado final e permanente da história da salvação.</p>
+      <p>A afirmação "o segundo homem é do céu" — <span class="gi">ὁ δεύτερος ἄνθρωπος ἐξ οὐρανοῦ</span> — aponta para a origem celestial de Cristo, que contrasta com a origem terrena de Adão ("da terra, terreno"). Isso não significa que Cristo não seja verdadeiramente humano — ele o é plenamente. Significa que sua humanidade tem uma origem e uma qualidade diferentes: ele vem de cima, não de baixo; ele traz para a terra o que é celestial, não meramente o que é terreno. E os que a ele se unem participam progressivamente dessa qualidade celestial — "traremos também a imagem do celestial."</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Rm 5,20-21</p>
+      <blockquote>"A Lei interveio para que a falta se multiplicasse; mas onde o pecado se multiplicou, superabundou a graça, a fim de que, assim como o pecado reinou pela morte, também a graça reine pela justiça para a vida eterna, por Jesus Cristo nosso Senhor."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">A superabundância da graça — onde o pecado reinou, a graça reina mais</p>
+      <p>Este versículo conclui o desenvolvimento da tipologia adâmica em Romanos 5 e revela sua dimensão mais surpreendente: a graça não apenas iguala o pecado — ela o supera de forma absolutamente desproporcionada. O verbo que Paulo usa para descrever a graça é <span class="gi">ὑπερεπερίσσευσεν (hypereperisseusen)</span> — "superabundou", "transbordou em excesso extremo". É um verbo composto com duplo prefixo de intensidade (<span class="gi">hyper-</span> e <span class="gi">peri-</span>) que Paulo parece ter inventado para expressar o que nenhuma palavra comum conseguia dizer: a graça de Cristo excede o pecado de Adão de forma tão absoluta que ultrapassa qualquer medida.</p>
+      <p>A estrutura do versículo é paralela mas assimétrica: "o pecado reinou pela morte / a graça reine pela justiça para a vida eterna." O reinado do pecado tem por instrumento a morte — uma realidade que encerra, limita, destrói. O reinado da graça tem por instrumento a justiça — uma realidade que restaura, eleva, cria. E enquanto o reinado do pecado é um fato passado e presente ("reinou"), o reinado da graça é uma realidade em curso que aponta para o futuro: "para a vida eterna." O horizonte da graça é infinito — a vida eterna — enquanto o horizonte do pecado é finito — a morte que tem fim.</p>
+      <p>A introdução da Lei nesse versículo — "a Lei interveio para que a falta se multiplicasse" — não é um ataque à Torah. Paulo está dizendo que a função histórica da Lei foi tornar visível e explícita a gravidade do pecado que já existia desde Adão. Antes da Lei, o pecado existia mas não era reconhecido plenamente como transgressão de uma norma divina explícita. Com a Lei, o pecado se torna plenamente visível — e é exatamente essa visibilidade que prepara a necessidade e o contraste da graça. Quanto mais o pecado se torna visível em sua profundidade, mais a graça de Cristo aparece em sua superabundância.</p>
+    </div>
+  </div>
+
+  <!-- FONTES PATRÍSTICAS -->
+  <div class="secao-final">
+    <h2 class="secao-final-titulo">Fontes Patrísticas</h2>
+    <p>Ireneu de Lyon é o Padre que mais desenvolveu a tipologia Adão-Cristo, que ele chama de <em>anakephalaiōsis</em> — recapitulação. Em <em>Adversus Haereses</em> III,21,10 e V,1,3, Ireneu argumenta que Cristo "recapitulou" em si mesmo toda a história de Adão, mas em sentido inverso: onde Adão desobedeceu, Cristo obedeceu; onde Adão cedeu à tentação, Cristo resistiu; onde Adão pecou por uma árvore, Cristo salvou por uma árvore (a cruz). A recapitulação não é apenas substituição — é inversão e superação de cada passo da queda. Para Ireneu, a encarnação do Filho era necessária porque só o novo Adão — verdadeiramente humano e verdadeiramente divino — poderia fazer o que o primeiro Adão deixou de fazer.</p>
+    <p>Tertuliano, em <em>De Carne Christi</em>, desenvolve o paralelismo entre Maria e Eva: assim como a morte entrou pelo "sim" de Eva à tentação, a vida entrou pelo "sim" de Maria ao anjo. Esse paralelismo Maria-Eva é o complemento feminino da tipologia Adão-Cristo e revela como a tradição patrística latina leu o esquema paulino com profundidade e coerência.</p>
+    <p>Agostinho, em <em>De Peccatorum Meritis</em> e no <em>Contra Julianum</em>, desenvolve a teologia do pecado original a partir de Rm 5,12, lendo a preposição <span class="gi">ἐφ' ᾧ</span> como "no qual" — em Adão, a humanidade toda pecou. Para Agostinho, o pecado original é transmitido pela geração e consiste numa ferida na natureza humana — concupiscência, ignorância, fraqueza — que só a graça de Cristo pode curar. A tipologia paulina torna-se em Agostinho o fundamento da doutrina do pecado original e da necessidade universal da graça.</p>
+  </div>
+
+  <!-- SÍNTESE TEOLÓGICA -->
+  <div class="secao-final">
+    <h2 class="secao-final-titulo">Síntese Teológica</h2>
+    <div class="sintese-box">
+      <p>A tipologia Adão-Cristo é uma das contribuições mais originais e mais fecundas da teologia paulina. Ela resolve um problema fundamental que qualquer soteriologia cristã precisa enfrentar: por que a morte e ressurreição de um único indivíduo, Jesus de Nazaré, pode ter valor universal para toda a humanidade? A resposta de Paulo é que a relação entre um único indivíduo e a totalidade da humanidade já foi estabelecida por Deus na criação, com Adão. O precedente existe — o que um único ser humano faz pode determinar o destino de todos os outros. Cristo usa esse mesmo mecanismo de solidariedade, mas em sentido inverso e com resultado infinitamente superior.</p>
+      <p>O aspecto mais surpreendente da tipologia paulina é a assimetria que ele sublinha com o "muito mais" — <span class="gi">πολλῷ μᾶλλον</span>. Paulo não está dizendo que Cristo simplesmente desfaz o que Adão fez — como se a salvação fosse um retorno ao estado pré-queda. Está dizendo que Cristo eleva a humanidade a uma condição muito superior à de Adão antes da queda. Adão era mortal; os ressuscitados em Cristo serão imortais. Adão tinha a imagem de Deus como possibilidade; os glorificados em Cristo terão a imagem de Deus como realidade plena. A graça não restaura o paraíso perdido — inaugura algo incomparavelmente maior.</p>
+      <p>Essa tipologia tem ainda uma dimensão histórica e universal que Paulo não abandona: ela abarca toda a história humana, desde a criação até a parusia. Toda a humanidade está de algum modo "em Adão" — na condição de solidariedade com o primeiro pecado e com a morte. E toda a humanidade é chamada a ser "em Cristo" — a fazer a transição para o novo âmbito de existência inaugurado pela ressurreição. A história não é um ciclo fechado de pecado e morte — é um movimento aberto para a vida plena em Cristo.</p>
+    </div>
+  </div>
+
+  <nav class="nav-inferior">
+    <a href="05-hinos-cristologicos.html">← Hinos cristológicos</a>
+    <a href="paulo-teologia-index.html">Índice geral</a>
+    <a href="07-mediador-e-sacerdote.html">Mediador e Sacerdote →</a>
+  </nav>
+
+</div>
+</body>
+</html>

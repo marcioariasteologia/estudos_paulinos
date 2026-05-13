@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hinos Cristológicos — Teologia Paulina</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #0d1b2e; --gold: #c9a84c; --gold-light: #e2c97e; --gold-dim: #8a6f2e; --cream: #f4efe6; --cream-dim: #d6cfc2; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background-color: var(--navy); color: var(--cream); font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.85; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.04) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 32px 100px; position: relative; z-index: 1; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 20px; border-bottom: 1px solid rgba(201,168,76,0.12); margin-bottom: 56px; }
+  .nav a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav a:hover { color: var(--gold-light); }
+  .nav-center { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px; color: rgba(201,168,76,0.3); text-transform: uppercase; }
+  .topico-header { text-align: center; margin-bottom: 64px; }
+  .eixo-label { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 4px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 16px; }
+  .topico-header h1 { font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 38px); font-weight: 700; color: var(--gold-light); letter-spacing: 2px; line-height: 1.2; margin-bottom: 10px; }
+  .topico-header .grego { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--gold-dim); margin-bottom: 24px; }
+  .header-rule { display: flex; align-items: center; gap: 16px; justify-content: center; }
+  .header-rule span { display: block; height: 1px; width: 80px; background: linear-gradient(to right, transparent, var(--gold-dim)); }
+  .header-rule span:last-child { background: linear-gradient(to left, transparent, var(--gold-dim)); }
+  .header-rule i { color: var(--gold); font-style: normal; font-size: 14px; }
+  .secao-titulo { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .unidade { margin-bottom: 64px; }
+  .passagem { background: rgba(201,168,76,0.04); border-left: 3px solid rgba(201,168,76,0.4); padding: 24px 28px; }
+  .passagem-ref { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
+  .passagem blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; line-height: 1.8; color: var(--cream); }
+  .passagem .estrofe { margin-bottom: 16px; }
+  .passagem .estrofe:last-child { margin-bottom: 0; }
+  .passagem .estrofe-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 8px; opacity: 0.7; }
+  .analise { border-left: 3px solid rgba(201,168,76,0.12); padding: 28px 28px 4px; }
+  .analise-titulo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; font-weight: 500; color: var(--gold-light); margin-bottom: 16px; }
+  .analise p { margin-bottom: 20px; color: var(--cream); text-align: justify; }
+  .gi { font-style: italic; color: var(--gold-dim); }
+  .secao-final { margin-bottom: 56px; }
+  .secao-final-titulo { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 28px; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .secao-final p { margin-bottom: 20px; color: var(--cream); text-align: justify; }
+  .sintese-box { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.15); border-radius: 2px; padding: 32px 36px; }
+  .sintese-box p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.85; color: var(--cream); text-align: justify; margin-bottom: 18px; }
+  .sintese-box p:last-child { margin-bottom: 0; }
+  .nav-inferior { display: flex; justify-content: space-between; align-items: center; margin-top: 72px; padding-top: 28px; border-top: 1px solid rgba(201,168,76,0.12); flex-wrap: wrap; gap: 12px; }
+  .nav-inferior a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-inferior a:hover { color: var(--gold-light); }
+  @media (max-width: 600px) { .container { padding: 0 18px 80px; } .passagem { padding: 18px 16px; } .analise { padding: 20px 16px 4px; } .sintese-box { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="nav">
+    <a href="04-cristo-imagem-de-deus.html">← Anterior</a>
+    <span class="nav-center">Cristologia · V</span>
+    <a href="06-segundo-adao.html">Próximo →</a>
+  </nav>
+
+  <header class="topico-header">
+    <p class="eixo-label">Cristologia · Tópico 5</p>
+    <h1>Hinos Cristológicos</h1>
+    <p class="grego">Fl 2,6-11 · Cl 1,15-20 · 1 Tm 3,16</p>
+    <div class="header-rule"><span></span><i>✦</i><span></span></div>
+  </header>
+
+  <h2 class="secao-titulo">Passagens e Análise</h2>
+
+  <!-- HINO 1: Filipenses 2,6-11 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Fl 2,6-11 — Hino da Kênosis e da Exaltação</p>
+      <div class="estrofe">
+        <p class="estrofe-label">Estrofe I — Descida</p>
+        <blockquote>"Ele, tendo a condição divina, não considerou como uma presa a ser retida o ser igual a Deus. Mas esvaziou-se a si mesmo, tomando a condição de servo, tornando-se semelhante aos homens. Reconhecido em seu porte exterior como homem, humilhou-se a si mesmo, tornando-se obediente até a morte, e morte de cruz."</blockquote>
+      </div>
+      <div class="estrofe">
+        <p class="estrofe-label">Estrofe II — Exaltação</p>
+        <blockquote>"Por isso Deus o exaltou soberanamente e lhe deu o Nome que está acima de todo nome, para que ao nome de Jesus todo joelho se dobre nos céus, na terra e nos abismos, e toda língua proclame que Jesus Cristo é Senhor, para glória de Deus Pai."</blockquote>
+      </div>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Estrutura, origem e teologia do hino kenótico</p>
+      <p>O hino de Filipenses 2,6-11 é, junto com Cl 1,15-20, o texto cristológico mais denso de todo o corpus paulino. A maioria dos exegetas contemporâneos — entre eles Ralph Martin, Joachim Jeremias e Gordon Fee — reconhece que Paulo não compôs esse hino para a carta: ele o cita, incorporando-o ao argumento como material já conhecido da comunidade. Os indícios são vários: o vocabulário contém termos raros ou únicos em Paulo (<span class="gi">harpagmos</span>, <span class="gi">morphē</span>, <span class="gi">hyparchōn</span> com esse sentido específico); a estrutura é poética, com paralelismos e ritmo próprios; e a introdução do trecho com um particípio relativo (<span class="gi">ὅς</span> — "ele que") é um marcador típico de citação de material litúrgico preexistente.</p>
+      <p>A estrutura do hino é bipartida e segue um arco descendente-ascendente — o movimento de descida e retorno que é o padrão fundamental da cristologia paulina. A primeira estrofe (vv. 6-8) descreve a <em>katabasis</em> — a descida: da condição divina à condição humana, da condição humana à morte, da morte à morte de cruz. Cada passo é um grau a mais de rebaixamento. A segunda estrofe (vv. 9-11) descreve a <em>anabasis</em> — a subida: de Deus que exalta, ao Nome supremo, à prostração universal, à aclamação de toda criatura.</p>
+      <p>O eixo do hino é o "por isso" — <span class="gi">διό (dio)</span> — que liga as duas estrofes no v. 9: é <em>porque</em> Cristo se humilhou até o extremo que Deus o exaltou ao extremo oposto. Esse "por isso" não é uma relação de mérito no sentido jurídico — como se Cristo tivesse ganho a exaltação como recompensa. É uma relação de manifestação: a humilhação extrema revela quem Cristo realmente é, e a exaltação confirma e manifesta publicamente o que a encarnação havia ocultado. A glória que estava velada na kênosis é agora irradiada abertamente na exaltação.</p>
+      <p>O contexto imediato em que Paulo cita esse hino é significativo: ele está exortando os filipenses à humildade e à unidade (vv. 1-5). O hino não é apenas doutrina cristológica — é norma ética. A lógica é: se o Filho de Deus agiu assim, como podem os cristãos agir de forma diferente? A cristologia do hino funda diretamente a ética da comunidade. O rebaixamento de Cristo não é apenas o objeto da contemplação — é o modelo da vida cristã.</p>
+    </div>
+  </div>
+
+  <!-- HINO 2: Colossenses 1,15-20 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Cl 1,15-20 — Hino do Cristo Cósmico</p>
+      <div class="estrofe">
+        <p class="estrofe-label">Estrofe I — Cristo e a criação</p>
+        <blockquote>"Ele é a imagem do Deus invisível, o primogênito de toda a criação, pois nele foram criadas todas as coisas nos céus e na terra, as visíveis e as invisíveis, tronos, soberanias, principados, potestades: tudo foi criado por ele e para ele. Ele é antes de tudo, e tudo nele subsiste."</blockquote>
+      </div>
+      <div class="estrofe">
+        <p class="estrofe-label">Estrofe II — Cristo e a redenção</p>
+        <blockquote>"Ele é também a cabeça do corpo, da Igreja; ele é o princípio, o primogênito dentre os mortos, para que em tudo ele seja o primeiro. Pois aprouve a Deus fazer habitar nele toda a plenitude e por ele reconciliar consigo todos os seres, pacificando pelo sangue de sua cruz tanto os da terra como os dos céus."</blockquote>
+      </div>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">O Cristo cósmico — criação e redenção como um único horizonte</p>
+      <p>O hino de Colossenses 1,15-20 é estruturalmente paralelo ao de Filipenses, mas com um ângulo diferente: enquanto o hino filipense narra o movimento histórico de descida e exaltação, o hino colossense apresenta Cristo numa perspectiva cósmica e ontológica — sua relação com a totalidade do ser, tanto na criação quanto na redenção. Também aqui a maioria dos exegetas reconhece material pré-paulino, editado e incorporado por Paulo (ou pelo seu discípulo, no caso de Colossenses ser deuteropaulina).</p>
+      <p>A estrutura é bipartida e paralela. A primeira estrofe (vv. 15-17) trata da relação de Cristo com a criação, usando três afirmações fundamentais: Cristo é a imagem de Deus (<span class="gi">εἰκὼν τοῦ θεοῦ</span>), tudo foi criado nele, por ele e para ele (<span class="gi">ἐν αὐτῷ... δι' αὐτοῦ... εἰς αὐτόν</span>), e tudo nele subsiste (<span class="gi">τὰ πάντα ἐν αὐτῷ συνέστηκεν</span>). As três preposições — em, por, para — descrevem Cristo como fundamento, instrumento e finalidade de toda a existência criada. A segunda estrofe (vv. 18-20) trata da relação de Cristo com a redenção: ele é a cabeça da Igreja, o primogênito dentre os mortos, o portador da plenitude divina (<span class="gi">πλήρωμα</span>), e o agente da reconciliação universal pelo sangue de sua cruz.</p>
+      <p>O termo <span class="gi">πλήρωμα (plērōma</span> — "plenitude") no v. 19 é particularmente importante. Em Colossos, Paulo está provavelmente respondendo a uma "filosofia" (cf. 2,8) que distribuía a plenitude divina entre várias potências e intermediários cósmicos — os "tronos, soberanias, principados, potestades" do v. 16. A resposta do hino é radical: toda a plenitude habita em Cristo, e apenas nele. Não há nenhum intermediário necessário entre o ser humano e Deus além de Cristo — nenhuma hierarquia angelical a ser cultuada ou apaziguada. Cristo é o único e suficiente ponto de contato entre o cosmos e Deus.</p>
+      <p>O elemento que une as duas estrofes é o mesmo Cristo: o que criou todas as coisas é o mesmo que as reconcilia. A criação e a redenção não são dois projetos divinos distintos — são dois momentos do mesmo ato de amor de Deus em Cristo. O cosmos que foi criado "para ele" é o mesmo cosmos que é reconciliado "pelo sangue de sua cruz". A cruz não é um evento que contradiz a criação — é o ponto em que a criação é levada ao seu destino mais profundo.</p>
+    </div>
+  </div>
+
+  <!-- HINO 3: 1 Timóteo 3,16 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">1 Tm 3,16 — Hino do Mistério da Piedade</p>
+      <blockquote>"E reconhecidamente grande é o mistério da piedade:
+      Ele foi manifestado na carne,
+      justificado no Espírito,
+      contemplado pelos anjos,
+      proclamado entre os gentios,
+      crido no mundo,
+      elevado na glória."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Seis afirmações em três pares antitéticos</p>
+      <p>Este hino é o menor dos três grandes hinos cristológicos do corpus paulino, mas é de extraordinária densidade teológica. Ele é introduzido pela fórmula <span class="gi">ὁμολογουμένως μέγα ἐστὶν τὸ τῆς εὐσεβείας μυστήριον</span> — "reconhecidamente grande é o mistério da piedade" — que indica que o que segue é conteúdo confessional reconhecido e aceito pela comunidade. Não é Paulo ensinando algo novo — é Paulo citando o que a Igreja já confessa.</p>
+      <p>O hino é composto por seis afirmações em três pares antitéticos, cada par contrastando dois âmbitos opostos — carne/Espírito, anjos/gentios, mundo/glória — para descrever o evento de Cristo em sua amplitude total:</p>
+      <p>Primeiro par: "manifestado na carne / justificado no Espírito". <span class="gi">Ἐφανερώθη ἐν σαρκί (ephanerōthē en sarki)</span> — a encarnação: o Filho eterno se torna visível, tangível, histórico, na carne humana. <span class="gi">Ἐδικαιώθη ἐν πνεύματι (edikaiōthē en pneumati)</span> — a ressurreição: o Espírito "justifica" Cristo, isto é, o declara justo e o vindicou diante da morte e da condenação injusta. A ressurreição é a "justificação" de Cristo pelo Espírito — a confirmação divina de que sua vida e sua morte foram justas e salvíficas.</p>
+      <p>Segundo par: "contemplado pelos anjos / proclamado entre os gentios". <span class="gi">Ὤφθη ἀγγέλοις (ōphthē angelois)</span> — a exaltação: após a ressurreição e ascensão, Cristo é contemplado pelos anjos como Senhor glorificado. <span class="gi">Ἐκηρύχθη ἐν ἔθνεσιν (ekērychtē en ethnesin)</span> — a missão: o mesmo Cristo glorificado é proclamado entre os povos gentios pelo kerygma apostólico. O movimento vai do âmbito celeste ao âmbito terrestre — o que os anjos contemplam na glória, os apóstolos proclamam no mundo.</p>
+      <p>Terceiro par: "crido no mundo / elevado na glória". <span class="gi">Ἐπιστεύθη ἐν κόσμῳ (episteuthē en kosmō)</span> — a fé: o Evangelho proclamado encontra acolhida no mundo — crentes em todas as nações. <span class="gi">Ἀνελήμφθη ἐν δόξῃ (anelēmphthē en doxē)</span> — a ascensão: Cristo é elevado à glória do Pai, onde reina como Senhor do cosmos. O hino termina onde o de Filipenses termina: na glória — mas agora não como ponto de chegada apenas, e sim como horizonte que abarca tudo o que o precede.</p>
+    </div>
+  </div>
+
+  <!-- HINO 4: 2 Timóteo 2,11-13 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">2 Tm 2,11-13 — Hino da Fidelidade de Cristo</p>
+      <blockquote>"Esta palavra é digna de fé:
+      Se morremos com ele, também viveremos com ele;
+      se perseveramos, também com ele reinaremos;
+      se o renegamos, ele também nos renegará;
+      se somos infiéis, ele permanece fiel,
+      pois não pode renegar-se a si mesmo."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">A fidelidade incondicional de Cristo como fundamento da esperança</p>
+      <p>Este fragmento hímnico é introduzido pela fórmula <span class="gi">πιστὸς ὁ λόγος (pistos ho logos</span> — "esta palavra é digna de fé"), que em 1-2 Timóteo e Tito funciona como marcador de material confessional estabelecido. O que segue é provavelmente um fragmento de hino batismal — um canto que as comunidades paulinas usavam para expressar o significado do batismo como participação na morte e ressurreição de Cristo.</p>
+      <p>As quatro afirmações formam dois pares, mas com uma assimetria deliberada e teologicamente crucial. Os dois primeiros: "se morremos com ele, viveremos com ele; se perseveramos, com ele reinaremos" — descrevem a lógica da participação: a morte com Cristo no batismo conduz à vida; a perseverança na fé conduz ao reino. Esses dois versos retomam a teologia batismal de Rm 6 e a esperança escatológica que percorre toda a pregação paulina.</p>
+      <p>Os dois seguintes introduzem uma assimetria: "se o renegamos, ele também nos renegará" — esse verso afirma a seriedade da fé e a possibilidade real da apostasia, em eco de Mt 10,33. Mas então vem o quarto verso, que rompe com a simetria esperada: "se somos infiéis, ele permanece fiel, pois não pode renegar-se a si mesmo." Aqui o hino não segue a lógica da reciprocidade — a infidelidade humana não provoca infidelidade divina. A fidelidade de Cristo (<span class="gi">πιστός (pistos)</span>) não depende da fidelidade humana — ela tem seu fundamento em Cristo mesmo, que "não pode renegar-se a si mesmo." A identidade de Cristo é ser fiel — e essa identidade é mais forte que qualquer infidelidade humana. Isso não anula a seriedade do v. anterior — a apostasia deliberada tem consequências reais — mas revela que a misericórdia divina é mais profunda do que qualquer falha humana.</p>
+    </div>
+  </div>
+
+  <!-- FONTES PATRÍSTICAS -->
+  <div class="secao-final">
+    <h2 class="secao-final-titulo">Fontes Patrísticas</h2>
+    <p>Inácio de Antioquia, mesmo antes do desenvolvimento da exegese patrística formal, já canta a cristologia do hino de Filipenses em sua própria linguagem. Em <em>Ad Ephesios</em> 7,2, a confissão de Cristo como "gerado e ingênito, Deus vindo na carne" ecoa precisamente a estrutura bipolar do hino kenótico — condição divina e condição humana como polos da identidade única do Filho.</p>
+    <p>Orígenes, no <em>Comentário a Filipenses</em> (fragmentos), foi um dos primeiros a analisar sistematicamente a estrutura do hino de Fl 2,6-11. Ele distingue entre o Filho eterno (<span class="gi">morphē theou</span>) e o Filho encarnado (<span class="gi">morphē doulou</span>), afirmando que a kenōsis não implica mudança na natureza divina mas assumção real da natureza humana. Para Orígenes, o hino ensina que a geração eterna do Filho é o fundamento de sua encarnação histórica.</p>
+    <p>Atanásio, nas <em>Cartas a Serapião</em> e no <em>Discurso Contra os Arianos</em>, usa extensamente Fl 2,6-11 e Cl 1,15-20 contra os arianos. Os arianos usavam "primogênito de toda a criação" (Cl 1,15) para argumentar que Cristo era a primeira criatura. Atanásio responde demonstrando que "primogênito" designa primazia ontológica, não geração temporal, e que o contexto imediato — "tudo foi criado por ele" — exclui absolutamente que ele seja criatura: não se cria a si mesmo.</p>
+    <p>João Crisóstomo, nas <em>Homilias sobre Filipenses</em>, é o comentarista patrístico mais completo de Fl 2,6-11. Para Crisóstomo, o núcleo do hino é a liberdade do rebaixamento de Cristo: ele não foi forçado a se humilhar — escolheu livremente fazê-lo por amor. Essa liberdade é o que torna o exemplo de Cristo norma ética para os cristãos: não uma obrigação imposta de fora, mas um modelo de amor a ser imitado de dentro.</p>
+  </div>
+
+  <!-- SÍNTESE TEOLÓGICA -->
+  <div class="secao-final">
+    <h2 class="secao-final-titulo">Síntese Teológica</h2>
+    <div class="sintese-box">
+      <p>Os hinos cristológicos do corpus paulino não são ornamentos poéticos inseridos nas cartas para embelezar a argumentação — são o coração teológico mais concentrado da fé cristã primitiva. Eles precedem Paulo, circulavam nas comunidades litúrgicas, eram cantados no culto e no batismo, e expressavam em forma comprimida e memorável o que a Igreja havia compreendido sobre Jesus Cristo à luz da ressurreição e das Escrituras.</p>
+      <p>Os três grandes hinos — Fl 2,6-11, Cl 1,15-20 e 1 Tm 3,16 — cobrem juntos a totalidade do evento de Cristo: sua origem eterna na condição divina, sua encarnação histórica na condição humana, sua morte e ressurreição como centro da salvação, sua exaltação como Senhor do cosmos, sua proclamação nos gentios, e seu reinado glorioso no fim. Nenhum aspecto é omitido — a cristologia hímnica é uma cristologia completa.</p>
+      <p>O fato de Paulo citar esses hinos em vez de compô-los revela algo importante: a fé cristológica mais alta não é invenção paulina. Paulo a recebe, a incorpora, a aprofunda — mas não a cria. Ela vem de antes dele, das comunidades mais primitivas, provavelmente dos discípulos diretos de Jesus. Os hinos são portanto um testemunho da antiguidade e do enraizamento comunitário da cristologia elevada — uma resposta direta à tese de que a divindade de Cristo seria uma elaboração tardia do pensamento cristão.</p>
+    </div>
+  </div>
+
+  <nav class="nav-inferior">
+    <a href="04-cristo-imagem-de-deus.html">← Cristo como imagem de Deus</a>
+    <a href="paulo-teologia-index.html">Índice geral</a>
+    <a href="06-segundo-adao.html">Segundo Adão →</a>
+  </nav>
+
+</div>
+</body>
+</html>
