@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cristo como Imagem de Deus — Teologia Paulina</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #0d1b2e; --gold: #c9a84c; --gold-light: #e2c97e; --gold-dim: #8a6f2e; --cream: #f4efe6; --cream-dim: #d6cfc2; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background-color: var(--navy); color: var(--cream); font-family: 'EB Garamond', Georgia, serif; font-size: 18px; line-height: 1.85; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: radial-gradient(ellipse at 20% 20%, rgba(201,168,76,0.04) 0%, transparent 60%), radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 32px 100px; position: relative; z-index: 1; }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 20px; border-bottom: 1px solid rgba(201,168,76,0.12); margin-bottom: 56px; }
+  .nav a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav a:hover { color: var(--gold-light); }
+  .nav-center { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px; color: rgba(201,168,76,0.3); text-transform: uppercase; }
+  .topico-header { text-align: center; margin-bottom: 64px; }
+  .eixo-label { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 4px; color: var(--gold-dim); text-transform: uppercase; margin-bottom: 16px; }
+  .topico-header h1 { font-family: 'Cinzel', serif; font-size: clamp(22px, 4vw, 38px); font-weight: 700; color: var(--gold-light); letter-spacing: 2px; line-height: 1.2; margin-bottom: 10px; }
+  .topico-header .grego { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--gold-dim); margin-bottom: 24px; }
+  .header-rule { display: flex; align-items: center; gap: 16px; justify-content: center; }
+  .header-rule span { display: block; height: 1px; width: 80px; background: linear-gradient(to right, transparent, var(--gold-dim)); }
+  .header-rule span:last-child { background: linear-gradient(to left, transparent, var(--gold-dim)); }
+  .header-rule i { color: var(--gold); font-style: normal; font-size: 14px; }
+  .secao-titulo { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .unidade { margin-bottom: 64px; }
+  .passagem { background: rgba(201,168,76,0.04); border-left: 3px solid rgba(201,168,76,0.4); padding: 24px 28px; }
+  .passagem-ref { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
+  .passagem blockquote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; line-height: 1.8; color: var(--cream); }
+  .analise { border-left: 3px solid rgba(201,168,76,0.12); padding: 28px 28px 4px; }
+  .analise-titulo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; font-weight: 500; color: var(--gold-light); margin-bottom: 16px; }
+  .analise p { margin-bottom: 20px; color: var(--cream); text-align: justify; }
+  .gi { font-style: italic; color: var(--gold-dim); }
+  .secao-final { margin-bottom: 56px; }
+  .secao-final-titulo { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 28px; padding-bottom: 10px; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .secao-final p { margin-bottom: 20px; color: var(--cream); text-align: justify; }
+  .sintese-box { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.15); border-radius: 2px; padding: 32px 36px; }
+  .sintese-box p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.85; color: var(--cream); text-align: justify; margin-bottom: 18px; }
+  .sintese-box p:last-child { margin-bottom: 0; }
+  .nav-inferior { display: flex; justify-content: space-between; align-items: center; margin-top: 72px; padding-top: 28px; border-top: 1px solid rgba(201,168,76,0.12); flex-wrap: wrap; gap: 12px; }
+  .nav-inferior a { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 2px; color: var(--gold-dim); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
+  .nav-inferior a:hover { color: var(--gold-light); }
+  @media (max-width: 600px) { .container { padding: 0 18px 80px; } .passagem { padding: 18px 16px; } .analise { padding: 20px 16px 4px; } .sintese-box { padding: 24px 20px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="nav">
+    <a href="03-morte-e-ressurreicao.html">← Anterior</a>
+    <span class="nav-center">Cristologia · IV</span>
+    <a href="05-hinos-cristologicos.html">Próximo →</a>
+  </nav>
+
+  <header class="topico-header">
+    <p class="eixo-label">Cristologia · Tópico 4</p>
+    <h1>Cristo como Imagem de Deus</h1>
+    <p class="grego">Eikōn — εἰκών</p>
+    <div class="header-rule"><span></span><i>✦</i><span></span></div>
+  </header>
+
+  <h2 class="secao-titulo">Passagens e Análise</h2>
+
+  <!-- 1 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Cl 1,15</p>
+      <blockquote>"Ele é a imagem do Deus invisível, o primogênito de toda a criação."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Eikōn tou Theou — a imagem perfeita e original</p>
+      <p>A palavra grega <span class="gi">εἰκών (eikōn)</span> significa "imagem", "representação", "retrato". No mundo antigo, a imagem não era apenas uma reprodução visual — ela participava da realidade daquilo que representava. A imagem do imperador gravada numa moeda, por exemplo, era tratada como se o próprio imperador estivesse presente. Quando Paulo diz que Cristo é a <span class="gi">εἰκὼν τοῦ θεοῦ τοῦ ἀοράτου</span> — "imagem do Deus invisível" — não está dizendo que Cristo é uma cópia ou uma representação secundária de Deus. Está dizendo que Cristo torna presente e visível aquilo que por natureza é invisível: o próprio Deus.</p>
+      <p>O qualificativo "invisível" — <span class="gi">ἀοράτου (aoratos)</span> — é decisivo. Deus em si mesmo é inacessível à visão humana. Nenhum ser humano pode ver a Deus e continuar vivo (cf. Ex 33,20). Mas em Cristo essa invisibilidade se torna visível — não porque Deus perca sua transcendência, mas porque o Filho, sendo de mesma natureza com o Pai, pode expressar na forma humana e histórica o que o Pai é em sua essência divina. Cristo não é a imagem de um Deus diferente — é a imagem do mesmo Deus que sempre foi invisível, agora tornado visível em carne.</p>
+      <p>Essa afirmação tem raízes na tradição judaica da Sabedoria. No livro da Sabedoria (7,26), a Sabedoria divina é descrita como "reflexo da luz eterna, espelho sem mácula da atividade de Deus, imagem de sua bondade". Paulo parece estar aplicando a Cristo categorias que a tradição judaica havia desenvolvido para descrever a Sabedoria preexistente de Deus — mas vai além: enquanto a Sabedoria era uma personificação poética, Cristo é uma pessoa histórica real.</p>
+      <p>A expressão "primogênito de toda a criação" — <span class="gi">πρωτότοκος πάσης κτίσεως</span> — não deve ser lida como indicando que Cristo seja o primeiro ser criado. Como já vimos no tópico anterior, "primogênito" (<span class="gi">prōtotokos</span>) em grego e hebraico designa primazia de dignidade e autoridade. O que o versículo afirma é que Cristo tem soberania absoluta sobre toda a criação — ele é o Senhor de tudo o que existe — porque é a imagem perfeita e original do Deus que criou tudo.</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">2 Cor 4,4</p>
+      <blockquote>"...o evangelho da glória de Cristo, que é a imagem de Deus."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">A glória de Cristo como revelação do Pai</p>
+      <p>Este versículo aparece num contexto em que Paulo está refletindo sobre por que algumas pessoas não recebem o Evangelho: "O deus deste século cegou o entendimento dos incrédulos para que não vejam a luz do evangelho da glória de Cristo" (v. 4). O contraste é entre a cegueira espiritual provocada pelo "deus deste século" — expressão paulina para o diabo, que atua na história como força de oposição a Deus — e a luz da glória de Cristo que ilumina quem recebe o Evangelho.</p>
+      <p>A expressão completa é <span class="gi">τὸν φωτισμὸν τοῦ εὐαγγελίου τῆς δόξης τοῦ Χριστοῦ, ὅς ἐστιν εἰκὼν τοῦ θεοῦ</span> — "a iluminação do evangelho da glória de Cristo, que é imagem de Deus". Os três substantivos — evangelho, glória, imagem — estão encadeados: o Evangelho é a proclamação da glória, e a glória é o brilho da imagem. Cristo, sendo a imagem de Deus, irradia a glória divina — e essa glória é o conteúdo do Evangelho.</p>
+      <p>O conceito de <span class="gi">δόξα (doxa</span> — "glória") tem raízes profundas no Antigo Testamento. A <span class="gi">כָּבוֹד (kabod)</span> de YHWH — sua glória, seu peso, sua presença luminosa — era o sinal visível da presença divina no templo e no deserto. Paulo afirma que essa glória agora reside em Cristo e é irradiada por ele. Ver Cristo com os olhos da fé é ver a glória de Deus — não no templo de pedra, mas na face humana do Filho encarnado. O versículo seguinte (v. 6) confirma: "Deus que disse: 'Das trevas brilhe a luz', ele mesmo fez brilhar a luz em nossos corações para iluminação do conhecimento da glória de Deus na face de Cristo."</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Rm 8,29</p>
+      <blockquote>"Porque os que de antemão conheceu, também os predestinou a serem conformes à imagem de seu Filho, para que ele seja o primogênito entre muitos irmãos."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">A conformação à imagem do Filho como destino do crente</p>
+      <p>Este versículo revela a dimensão soteriológica e escatológica do conceito de <span class="gi">eikōn</span>: Cristo não é apenas a imagem de Deus para que possamos conhecer o Pai — ele é a imagem à qual os crentes são predestinados a serem conformados. A imagem de Cristo não é apenas um objeto de contemplação — é o destino da existência cristã.</p>
+      <p>O verbo <span class="gi">συμμόρφους (symmorphous)</span> — "conformes", "da mesma forma que" — vem da mesma raiz de <span class="gi">morphē</span> que encontramos em Fl 2,6-7. Cristo tinha a <span class="gi">morphē theou</span> (forma de Deus) e assumiu a <span class="gi">morphē doulou</span> (forma de servo). Agora os crentes são predestinados a serem <span class="gi">symmorphoi</span> — da mesma forma que — o Filho. O percurso da salvação é um percurso de conformação: o crente é progressivamente transformado à imagem daquele que é a imagem perfeita do Pai.</p>
+      <p>O fim do versículo revela a lógica trinitária dessa conformação: "para que ele seja o primogênito entre muitos irmãos." Cristo é o Filho eterno e único do Pai — mas a salvação consiste exatamente em que muitos outros sejam elevados à condição de filhos, não por natureza mas por adoção e graça. Cristo é o "primogênito" nesse sentido: o primeiro e o modelo de uma família de filhos que cresce ao longo da história. A imagem de Deus que estava desfigurada em Adão é restaurada em Cristo e comunicada progressivamente a todos os que se unem a ele.</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">2 Cor 3,18</p>
+      <blockquote>"Todos nós, com o rosto descoberto, refletindo como num espelho a glória do Senhor, somos transformados nessa mesma imagem, de glória em glória, pelo Senhor que é o Espírito."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Transformação progressiva — de glória em glória</p>
+      <p>Este versículo é um dos mais ricos de todo o corpus paulino sobre a dinâmica da vida cristã. Paulo acabou de comparar a glória da antiga aliança — representada pelo véu sobre o rosto de Moisés (Ex 34,33-35) — com a glória da nova aliança. O véu de Moisés cobria uma glória que estava passando; os cristãos, pelo contrário, contemplam a glória com o "rosto descoberto" — <span class="gi">ἀνακεκαλυμμένῳ προσώπῳ (anakekalymmenō prosōpō)</span> — sem véu, sem intermediário, diretamente.</p>
+      <p>O verbo <span class="gi">κατοπτριζόμενοι (katoptrizomenoi)</span> pode ser traduzido de dois modos: "refletindo como num espelho" ou "contemplando como num espelho". Ambos os sentidos são teologicamente ricos. Se "contemplando": os crentes veem a glória de Cristo como num espelho — não a enfrentam diretamente (o que seria impossível na condição terrena), mas a percebem refletida. Se "refletindo": os crentes, ao contemplar a glória de Cristo, tornam-se eles mesmos reflexos dessa glória — a imagem que contemplam começa a brilhar neles.</p>
+      <p>O resultado dessa contemplação é a transformação: <span class="gi">μεταμορφούμεθα (metamorphoumetha)</span> — "somos transformados", "somos transfigurados". A raiz é a mesma de <span class="gi">morphē</span>: a forma interior do crente é progressivamente alterada. E essa transformação tem uma direção e um ritmo: <span class="gi">ἀπὸ δόξης εἰς δόξαν (apo doxēs eis doxan)</span> — "de glória em glória" — não de uma vez, mas progressivamente, de um grau de glória a outro maior. O agente dessa transformação é o Espírito Santo: "pelo Senhor que é o Espírito." A conformação à imagem de Cristo não é um esforço moral humano — é uma obra do Espírito que age no interior do crente que contempla e se abre à glória de Cristo.</p>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">1 Cor 15,49</p>
+      <blockquote>"E assim como trouxemos a imagem do homem de terra, traremos também a imagem do celestial."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">Adão e Cristo — duas imagens, dois destinos</p>
+      <p>Este versículo pertence ao grande desenvolvimento de 1 Cor 15 sobre a ressurreição dos mortos e a natureza do corpo ressuscitado. Paulo está desenvolvendo a tipologia Adão-Cristo: assim como todos os seres humanos "trouxeram" — <span class="gi">ἐφορέσαμεν (ephoresamen)</span>, literalmente "vestiram", "carregaram" — a imagem do Adão terreno (corpo físico, sujeito à corrupção e à morte), assim também os ressuscitados trarão a imagem do Adão celestial, que é Cristo ressuscitado.</p>
+      <p>A palavra <span class="gi">εἰκών (eikōn)</span> aparece aqui em dois sentidos contrastantes. A "imagem do homem de terra" é a condição adâmica: corpo psíquico, animado pelo princípio vital natural, sujeito ao pecado, à corrupção e à morte (cf. Gn 2,7 — "Deus formou o homem do pó da terra e soprou em suas narinas um sopro de vida"). A "imagem do celestial" é a condição cristológica escatológica: corpo pneumático, glorificado, transformado pelo Espírito, participante da vida ressuscitada de Cristo.</p>
+      <p>Paulo não está dizendo que os cristãos se tornarão seres imateriais ou espirituais no sentido de não-corporais. O "celestial" não é o imaterial — é o corpo humano transformado e glorificado pela ação do Espírito, como o próprio corpo ressuscitado de Cristo. A imagem que traremos é a imagem de Cristo ressuscitado — humano e glorificado ao mesmo tempo, não um fantasma. O destino do ser humano é ser, em sua inteireza corporal, conforme à imagem do Filho de Deus.</p>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="unidade">
+    <div class="passagem">
+      <p class="passagem-ref">Cl 3,10</p>
+      <blockquote>"...e vos revestistes do homem novo, que se renova para o conhecimento, segundo a imagem do seu Criador."</blockquote>
+    </div>
+    <div class="analise">
+      <p class="analise-titulo">A renovação segundo a imagem — dimensão batismal e moral</p>
+      <p>Este versículo aparece no contexto da exortação de Paulo aos colossenses a "despir o homem velho com suas práticas" e "revestir o homem novo" (Cl 3,9-10). A imagem do vestir e do despir é batismal: no batismo o crente "reveste Cristo" (cf. Gl 3,27) e se torna um "homem novo". Mas Paulo não trata esse revestimento como um evento pontual encerrado em si mesmo — ele é um processo contínuo: o homem novo "se renova" — <span class="gi">ἀνακαινούμενον (anakainumenon)</span>, particípio presente passivo — continuamente, progressivamente, sempre.</p>
+      <p>A direção dessa renovação é precisa: "segundo a imagem do seu Criador" — <span class="gi">κατ' εἰκόνα τοῦ κτίσαντος αὐτόν</span>. O "Criador" aqui é Deus — e a imagem de Deus é Cristo. Paulo está retomando a linguagem de Gn 1,26-27 ("façamos o ser humano à nossa imagem e semelhança") e afirmando que o batismo inicia uma nova criação: o crente começa a ser renovado segundo a imagem original para a qual foi criado — a imagem de Deus que é Cristo. O pecado desfigurou essa imagem em Adão; a graça a restaura em Cristo.</p>
+      <p>O instrumento dessa renovação é o "conhecimento" — <span class="gi">εἰς ἐπίγνωσιν (eis epignōsin)</span>. O termo grego <span class="gi">ἐπίγνωσις (epignōsis)</span> não é o conhecimento intelectual abstrato (<span class="gi">gnōsis</span>), mas o conhecimento pessoal, relacional e transformador — o conhecimento que acontece quando alguém se deixa conhecer por Deus e conhece Deus de dentro. É o conhecimento que transforma porque é encontro, não apenas informação.</p>
+    </div>
+  </div>
+
+  <!-- FONTES PATRÍSTICAS -->
+  <div class="secao-final">
+    <h2 class="secao-final-titulo">Fontes Patrísticas</h2>
+    <p>Atanásio de Alexandria, no <em>De Incarnatione</em> (séc. IV), desenvolve extensamente a teologia da imagem como fundamento da encarnação e da salvação: "Deus criou o homem à sua imagem e semelhança, comunicando-lhe a participação em sua própria Palavra, para que tendo como que uma sombra da Palavra e sendo tornados racionais, pudessem permanecer em bem-aventurança." O pecado desfigurou essa imagem. Por isso o Filho — que é a Imagem original — se encarnou: para restaurar no ser humano a imagem que havia sido corrompida. A encarnação é, para Atanásio, um ato de restauração da imagem: "O Verbo de Deus veio em pessoa, para que, sendo a Imagem do Pai, pudesse restaurar o homem feito à imagem."</p>
+    <p>Orígenes, no <em>De Principiis</em> (séc. III), distingue entre "imagem" e "semelhança" de Gn 1,26: a imagem seria dada na criação (estrutura racional e espiritual do ser humano), enquanto a semelhança seria o destino escatológico — a plena conformação a Deus alcançada pela virtude e pela graça. Embora essa distinção não seja sustentada pela exegese moderna, ela revela a intuição patrística de que o conceito de imagem aponta para um dinamismo: o ser humano foi criado à imagem de Deus, mas é chamado a uma conformação progressiva e crescente a essa imagem.</p>
+    <p>Gregório de Nissa, no <em>De Opificio Hominis</em> (séc. IV), desenvolve uma teologia da imagem profundamente dinâmica: a imagem de Deus no ser humano não é uma propriedade estática mas um movimento constante em direção ao Deus que é infinito. Como Deus não tem limite, a conformação à sua imagem nunca se esgota — há sempre uma glória maior à qual o crente pode ser elevado. Isso ressoa diretamente com a expressão paulina "de glória em glória" de 2 Cor 3,18.</p>
+  </div>
+
+  <!-- SÍNTESE TEOLÓGICA -->
+  <div class="secao-final">
+    <h2 class="secao-final-titulo">Síntese Teológica</h2>
+    <div class="sintese-box">
+      <p>O conceito de <span class="gi">eikōn</span> em Paulo tem uma dupla função: cristológica e antropológica. Cristologicamente, Cristo é a imagem perfeita e original de Deus — não uma cópia, não uma representação secundária, mas a expressão plena e definitiva da realidade divina na forma histórica e humana. Ver Cristo é ver o Pai (cf. Jo 14,9 — que Paulo nunca cita mas pressupõe). O Deus que é invisível por natureza torna-se visível em Cristo por graça.</p>
+      <p>Antropologicamente, o conceito de imagem cria uma ponte entre a criação, a queda e a redenção. O ser humano foi criado à imagem de Deus — mas essa imagem foi desfigurada pelo pecado de Adão. Cristo, como imagem perfeita do Pai e como novo Adão, veio restaurar essa imagem. E a vida cristã — batismo, fé, contemplação, ação moral — é o processo pelo qual a imagem restaurada em Cristo é progressivamente impressa no crente: "de glória em glória" (2 Cor 3,18), "conformes à imagem do Filho" (Rm 8,29), "renovados segundo a imagem do Criador" (Cl 3,10).</p>
+      <p>Essa dinâmica tem seu ápice escatológico: a plena conformação à imagem de Cristo ressuscitado, quando o crente "trará a imagem do celestial" (1 Cor 15,49) — corpo e alma glorificados, participantes da vida divina de modo pleno e definitivo. O ponto de chegada da criação é o mesmo que seu ponto de partida: a imagem de Deus — mas agora não como possibilidade a ser desenvolvida, e sim como realidade plenamente realizada no Filho e, nele, em todos os seus irmãos.</p>
+    </div>
+  </div>
+
+  <nav class="nav-inferior">
+    <a href="03-morte-e-ressurreicao.html">← Morte e ressurreição</a>
+    <a href="paulo-teologia-index.html">Índice geral</a>
+    <a href="05-hinos-cristologicos.html">Hinos cristológicos →</a>
+  </nav>
+
+</div>
+</body>
+</html>
